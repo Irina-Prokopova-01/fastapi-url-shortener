@@ -1,6 +1,8 @@
-def main():
-    print("Hello from fastapi-url-shortener!")
+from fastapi import FastAPI
 
+app = FastAPI(
+    title="URL Shortener",
+)
 
-if __name__ == "__main__":
-    main()
+# if __name__ == "__main__":
+#     main()
