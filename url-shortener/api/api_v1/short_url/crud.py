@@ -1,13 +1,42 @@
-from schemas.short_url import ShortUrl
+from pydantic import BaseModel, AnyHttpUrl
+
+from schemas.short_url import ShortUrl, ShortUrlCreate
 
 
-SHORT_URLS = [
-    ShortUrl(
-        target_url="http://example.com",
+class ShortUrlStorage(BaseModel):
+    """
+    Это словарь, который сопоставляет "slug"
+    (короткое имя URL) с объектом ShortUrl.
+    Словарь инициализируется пустым словарем.
+    """
+
+    slug_to_short_url: dict[str, ShortUrl] = {}
+
+    def get(self) -> list[ShortUrl]:
+        return list(self.slug_to_short_url.values())
+
+    def get_by_slug(self, slug: str) -> ShortUrl | None:
+        return self.slug_to_short_url.get(slug)
+
+    def create(self, short_url_in: ShortUrlCreate) -> ShortUrl:
+        short_url = ShortUrl(
+            **short_url_in.model_dump(),
+        )
+        self.slug_to_short_url[short_url.slug] = short_url
+        return short_url
+
+
+storage = ShortUrlStorage()
+
+storage.create(
+    ShortUrlCreate(
+        target_url=AnyHttpUrl("http://example.com"),
         slug="example",
-    ),
-    ShortUrl(
-        target_url="http://google.com",
+    )
+)
+storage.create(
+    ShortUrlCreate(
+        target_url=AnyHttpUrl("http://google.com"),
         slug="google",
-    ),
-]
+    )
+)
