@@ -8,8 +8,7 @@ from fastapi import (
 
 from api.api_v1.short_url.crud import storage
 from api.api_v1.short_url.dependencies import prefetch_short_url
-from schemas.short_url import ShortUrl
-
+from schemas.short_url import ShortUrl, ShortUrlUpdate
 
 router = APIRouter(
     prefix="/{slug}",
@@ -27,15 +26,34 @@ router = APIRouter(
     },
 )
 
+ShortUrlBySlug = Annotated[
+    ShortUrl,
+    Depends(prefetch_short_url),
+]
+
 
 @router.get("/", response_model=ShortUrl)
-def read_short_url_detail(url: Annotated[ShortUrl, Depends(prefetch_short_url)]):
+def read_short_url_detail(url: ShortUrlBySlug):
     return url
+
+
+@router.put(
+    "/",
+    response_model=ShortUrlUpdate,
+)
+def update_short_url_details(
+    url: ShortUrlBySlug,
+    short_url_in: ShortUrlUpdate,
+):
+    return storage.update(
+        short_url=url,
+        short_url_in=short_url_in,
+    )
 
 
 @router.delete(
     "/",
     status_code=status.HTTP_204_NO_CONTENT,
 )
-def delete_short_url(url: Annotated[ShortUrl, Depends(prefetch_short_url)]) -> None:
+def delete_short_url(url: ShortUrlBySlug) -> None:
     storage.delete(short_url=url)
