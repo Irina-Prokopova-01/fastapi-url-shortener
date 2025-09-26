@@ -1,11 +1,16 @@
-from pydantic import BaseModel, AnyHttpUrl
+import logging
 
+from pydantic import BaseModel, AnyHttpUrl, ValidationError
+
+from core.config import SHORT_URL_STORAGE_FILEPATH
 from schemas.short_url import (
     ShortUrl,
     ShortUrlCreate,
     ShortUrlUpdate,
     ShortUrlPartialUpdate,
 )
+
+log = logging.getLogger(__name__)
 
 
 class ShortUrlStorage(BaseModel):
@@ -16,6 +21,16 @@ class ShortUrlStorage(BaseModel):
     """
 
     slug_to_short_url: dict[str, ShortUrl] = {}
+
+    def save_state(self) -> None:
+        SHORT_URL_STORAGE_FILEPATH.write_text(self.model_dump_json(indent=2))
+        log.info(f"Saved short urls to storage file.")
+
+    @classmethod
+    def from_state(cls) -> "ShortUrlStorage":
+        if not SHORT_URL_STORAGE_FILEPATH.exists():
+            return ShortUrlStorage()
+        return cls.model_validate_json(SHORT_URL_STORAGE_FILEPATH.read_text())
 
     def get(self) -> list[ShortUrl]:
         return list(self.slug_to_short_url.values())
@@ -28,10 +43,12 @@ class ShortUrlStorage(BaseModel):
             **short_url_in.model_dump(),
         )
         self.slug_to_short_url[short_url.slug] = short_url
+        self.save_state()
         return short_url
 
     def delete_by_slug(self, slug: str) -> None:
         self.slug_to_short_url.pop(slug, None)
+        self.save_state()
 
     def delete(self, short_url: ShortUrl) -> None:
         self.delete_by_slug(slug=short_url.slug)
@@ -43,6 +60,7 @@ class ShortUrlStorage(BaseModel):
     ) -> ShortUrl:
         for field_name, value in short_url_in:
             setattr(short_url, field_name, value)
+        self.save_state()
         return short_url
 
     def update_partial(
@@ -52,22 +70,30 @@ class ShortUrlStorage(BaseModel):
     ):
         for field_name, value in short_url_in.model_dump(exclude_unset=True).items():
             setattr(short_url, field_name, value)
+        self.save_state()
         return short_url
 
 
-storage = ShortUrlStorage()
+try:
+    storage = ShortUrlStorage.from_state()
+except ValidationError:
+    storage = ShortUrlStorage()
+    storage.save_state()
 
-storage.create(
-    ShortUrlCreate(
-        target_url=AnyHttpUrl("http://example.com"),
-        slug="example",
-        description="example описание",
-    )
-)
-storage.create(
-    ShortUrlCreate(
-        target_url=AnyHttpUrl("http://google.com"),
-        slug="google",
-        description="google описание",
-    )
-)
+
+# storage = ShortUrlStorage()
+#
+# storage.create(
+#     ShortUrlCreate(
+#         target_url=AnyHttpUrl("http://example.com"),
+#         slug="example",
+#         description="example описание",
+#     )
+# )
+# storage.create(
+#     ShortUrlCreate(
+#         target_url=AnyHttpUrl("http://google.com"),
+#         slug="google",
+#         description="google описание",
+#     )
+# )
