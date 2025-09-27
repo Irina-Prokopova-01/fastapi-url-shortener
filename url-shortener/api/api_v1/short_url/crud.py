@@ -29,6 +29,7 @@ class ShortUrlStorage(BaseModel):
     @classmethod
     def from_state(cls) -> "ShortUrlStorage":
         if not SHORT_URL_STORAGE_FILEPATH.exists():
+            log.info(f"Short urls to storage file does not exist.")
             return ShortUrlStorage()
         return cls.model_validate_json(SHORT_URL_STORAGE_FILEPATH.read_text())
 
@@ -76,9 +77,11 @@ class ShortUrlStorage(BaseModel):
 
 try:
     storage = ShortUrlStorage.from_state()
+    log.warning("Recovered data from storage file")
 except ValidationError:
     storage = ShortUrlStorage()
     storage.save_state()
+    log.warning("Rewritten storege file")
 
 
 # storage = ShortUrlStorage()
