@@ -33,6 +33,21 @@ class ShortUrlStorage(BaseModel):
             return ShortUrlStorage()
         return cls.model_validate_json(SHORT_URL_STORAGE_FILEPATH.read_text())
 
+    def init_storage_from_state(self):
+        try:
+            data = ShortUrlStorage.from_state()
+        except ValidationError:
+            self.save_state()
+            log.warning("Rewritten storege file")
+            return
+
+        # storage.slug_to_short_url = data.slug_to_short_url
+        # мы обновляем свойство на прямую и если будут новые свойства, мы хотим их тоже обновить
+        self.slug_to_short_url.update(
+            data.slug_to_short_url,
+        )
+        log.warning("Recovered data from storage file")
+
     def get(self) -> list[ShortUrl]:
         return list(self.slug_to_short_url.values())
 
@@ -75,14 +90,32 @@ class ShortUrlStorage(BaseModel):
         return short_url
 
 
-try:
-    storage = ShortUrlStorage.from_state()
-    log.warning("Recovered data from storage file")
-except ValidationError:
-    storage = ShortUrlStorage()
-    storage.save_state()
-    log.warning("Rewritten storege file")
+storage = ShortUrlStorage()
 
+# try:
+#     storage = ShortUrlStorage.from_state()
+#     log.warning("Recovered data from storage file")
+# except ValidationError:
+#     storage = ShortUrlStorage()
+#     storage.save_state()
+#     log.warning("Rewritten storege file")
+
+
+# def init_storage_from_state():
+#     try:
+#         data = ShortUrlStorage.from_state()
+#     except ValidationError:
+#         storage.save_state()
+#         log.warning("Rewritten storege file")
+#         return
+#
+#     # storage.slug_to_short_url = data.slug_to_short_url
+#     # мы обновляем свойство на прямую и если будут новые свойства, мы хотим их тоже обновить
+#     storage.slug_to_short_url.update(
+#         data.slug_to_short_url,
+#     )
+#     log.warning("Recovered data from storage file")
+#
 
 # storage = ShortUrlStorage()
 #
