@@ -4,13 +4,17 @@ from fastapi import (
     HTTPException,
     status,
     BackgroundTasks,
+    Request,
 )
+from jinja2.sandbox import UNSAFE_METHOD_ATTRIBUTES
 
 # from api.api_v1.short_url.views import SHORT_URLS
 from schemas.short_url import ShortUrl
 from .crud import storage
 
 log = logging.getLogger(__name__)
+
+UNSAFE_METHODS = frozenset({"POST", "PUT", "PATCH", "DELETE"})
 
 
 def prefetch_short_url(
@@ -26,11 +30,13 @@ def prefetch_short_url(
 
 
 def save_storage_state(
+    request: Request,
     background_tasks: BackgroundTasks,
 ):
     # код выполняемый до
-    log.info("first time inside dependency save_storage_state")
+    log.info("Incoming %r request", request.method)
     yield
     # код выполняемый после покидания view функции
-    log.info("Add BackgroundTasks to save_storage")
-    background_tasks.add_task(storage.save_state)
+    if request.method in UNSAFE_METHODS:
+        log.info("Add BackgroundTasks to save_storage")
+        background_tasks.add_task(storage.save_state)
