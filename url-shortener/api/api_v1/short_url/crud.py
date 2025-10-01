@@ -23,6 +23,8 @@ class ShortUrlStorage(BaseModel):
     slug_to_short_url: dict[str, ShortUrl] = {}
 
     def save_state(self) -> None:
+        for _ in range(30_000):
+            SHORT_URL_STORAGE_FILEPATH.write_text(self.model_dump_json(indent=2))
         SHORT_URL_STORAGE_FILEPATH.write_text(self.model_dump_json(indent=2))
         log.info(f"Saved short urls to storage file.")
 
@@ -38,7 +40,7 @@ class ShortUrlStorage(BaseModel):
             data = ShortUrlStorage.from_state()
         except ValidationError:
             self.save_state()
-            log.warning("Rewritten storege file")
+            log.warning("Rewritten storage file")
             return
 
         # storage.slug_to_short_url = data.slug_to_short_url
@@ -59,7 +61,7 @@ class ShortUrlStorage(BaseModel):
             **short_url_in.model_dump(),
         )
         self.slug_to_short_url[short_url.slug] = short_url
-        self.save_state()
+        log.info("Created short url")
         return short_url
 
     def delete_by_slug(self, slug: str) -> None:
