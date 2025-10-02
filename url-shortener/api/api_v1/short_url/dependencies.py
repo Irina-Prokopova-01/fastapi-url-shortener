@@ -1,12 +1,16 @@
 import logging
+from typing import Annotated
 
 from fastapi import (
     HTTPException,
     status,
     BackgroundTasks,
     Request,
+    Query,
 )
 from jinja2.sandbox import UNSAFE_METHOD_ATTRIBUTES
+
+from core.config import API_TOKENS
 
 # from api.api_v1.short_url.views import SHORT_URLS
 from schemas.short_url import ShortUrl
@@ -40,3 +44,16 @@ def save_storage_state(
     if request.method in UNSAFE_METHODS:
         log.info("Add BackgroundTasks to save_storage")
         background_tasks.add_task(storage.save_state)
+
+
+def api_token_required(
+    api_token: Annotated[
+        str,
+        Query(),
+    ],
+):
+    if api_token not in API_TOKENS:
+        raise HTTPException(
+            status_code=status.HTTP_401_UNAUTHORIZED,
+            detail="Invalid API token",
+        )
