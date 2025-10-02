@@ -19,8 +19,8 @@ from schemas.short_url import (
 router = APIRouter(
     prefix="/{slug}",
     responses={
-        status.HTTP_404_NOT_FOUND: {
-            "description": "Short URL not found",
+        status.HTTP_401_UNAUTHORIZED: {
+            "description": "Unauthenticated. Only for unsafe methods.",
             "content": {
                 "application/json": {
                     "example": {
