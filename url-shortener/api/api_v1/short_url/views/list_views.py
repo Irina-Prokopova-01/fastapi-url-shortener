@@ -8,7 +8,7 @@ from fastapi.params import Depends
 from api.api_v1.short_url.crud import storage
 from api.api_v1.short_url.dependencies import (
     save_storage_state,
-    api_token_required_for_unsafe_methods,
+    user_basic_auth_required,
 )
 from schemas.short_url import ShortUrlCreate, ShortUrl, ShortUrlRead
 
@@ -17,7 +17,7 @@ router = APIRouter(
     tags=["Short URLs"],
     dependencies=[
         Depends(save_storage_state),
-        Depends(api_token_required_for_unsafe_methods),
+        # Depends(api_token_required_for_unsafe_methods),
     ],
 )
 
@@ -34,6 +34,7 @@ def read_short_urls_list() -> list[ShortUrl]:
     "/",
     response_model=ShortUrlRead,
     status_code=status.HTTP_201_CREATED,
+    dependencies=[Depends(user_basic_auth_required)],
 )
 def create_short_url(
     short_url_create: ShortUrlCreate,
