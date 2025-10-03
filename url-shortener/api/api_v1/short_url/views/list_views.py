@@ -8,7 +8,8 @@ from fastapi.params import Depends
 from api.api_v1.short_url.crud import storage
 from api.api_v1.short_url.dependencies import (
     save_storage_state,
-    user_basic_auth_required_for_unsafe_methods,
+    # user_basic_auth_required_for_unsafe_methods,
+    api_token_or_user_basic_auth_required_for_unsafe_methods,
 )
 from schemas.short_url import ShortUrlCreate, ShortUrl, ShortUrlRead
 
@@ -18,7 +19,8 @@ router = APIRouter(
     dependencies=[
         Depends(save_storage_state),
         # Depends(api_token_required_for_unsafe_methods),
-        Depends(user_basic_auth_required_for_unsafe_methods),
+        # Depends(user_basic_auth_required_for_unsafe_methods),
+        Depends(api_token_or_user_basic_auth_required_for_unsafe_methods),
     ],
 )
 
