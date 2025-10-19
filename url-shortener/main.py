@@ -1,4 +1,6 @@
 import logging
+
+import uvicorn
 from fastapi import (
     FastAPI,
     Request,
@@ -33,3 +35,7 @@ def read_root(
         "massage": "Hello {name}",
         "docs": str(docs_url),
     }
+
+
+if __name__ == "__main__":
+    uvicorn.run(app="main:app", reload=True)
