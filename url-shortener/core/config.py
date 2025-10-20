@@ -12,12 +12,12 @@ LOG_FORMAT: str = (
 
 # Never store real token here! Only fake values
 
-API_TOKENS: frozenset[str] = frozenset(
-    {
-        "Ykn4HsTExNoSwPAmwEt-3Q",
-        "rrSpMES6ozOvoxQKTTGc8g",
-    }
-)
+# API_TOKENS: frozenset[str] = frozenset(
+#     {
+#         "jhfdgkhkthuehfkjdbfjv",
+#         "rrSpMES6ozOvoxQKTTGc8g",
+#     }
+# )
 
 # Only for demo!
 # no real ustrs in code!!
@@ -29,3 +29,6 @@ USERS_DB: dict[str, str] = {
 REDIS_HOST = "localhost"
 REDIS_PORT = 6379
 REDIS_DB = 0
+REDIS_DB_TOKENS = 1
+
+REDIS_TOKENS_SET_NAME = "tokens"
