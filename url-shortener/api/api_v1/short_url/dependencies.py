@@ -26,7 +26,7 @@ from core.config import (
 # from api.api_v1.short_url.views import SHORT_URLS
 from schemas.short_url import ShortUrl
 from .crud import storage
-from .redis import redis_tokens
+from api.api_v1.auth.services import redis_tokens, redis_users
 
 log = logging.getLogger(__name__)
 
@@ -105,12 +105,12 @@ def api_token_required_for_unsafe_methods(
 def validate_basic_auth(
     credentials: HTTPBasicCredentials | None,
 ):
-    if (
-        credentials
-        and credentials.username in USERS_DB
-        and USERS_DB[credentials.username] == credentials.password
+    if credentials and redis_users.validate_user_password(
+        username=credentials.username,
+        password=credentials.password,
     ):
         return
+
     raise HTTPException(
         status_code=status.HTTP_401_UNAUTHORIZED,
         detail="Invalid username or password",
