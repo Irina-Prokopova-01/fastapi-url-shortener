@@ -2,6 +2,7 @@ from fastapi import (
     status,
     APIRouter,
     BackgroundTasks,
+    HTTPException,
 )
 from fastapi.params import Depends
 
@@ -43,4 +44,9 @@ def create_short_url(
     short_url_create: ShortUrlCreate,
     # _=Depends(api_token_required)
 ) -> ShortUrl:
+    if storage.get_by_slug(short_url_create.slug):
+        raise HTTPException(
+            status_code=status.HTTP_409_CONFLICT,
+            detail=f"Short URL with slug={short_url_create.slug!r} already exists",
+        )
     return storage.create(short_url_create)
