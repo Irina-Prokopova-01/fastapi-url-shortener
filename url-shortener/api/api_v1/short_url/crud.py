@@ -1,6 +1,7 @@
 import logging
 
 from pydantic import BaseModel, AnyHttpUrl, ValidationError, validate_email
+from pygments.lexers import data
 from redis import Redis
 
 from core import config
@@ -59,6 +60,13 @@ class ShortUrlStorage(BaseModel):
         )
         log.warning("Recovered data from storage file")
 
+    def save_short_url(self, short_url: ShortUrl) -> None:
+        redis.hset(
+            name=config.REDIS_SHORT_URLS_HASH_NAME,
+            key=short_url.slug,
+            value=short_url.model_dump_json(),
+        )
+
     def get(self) -> list[ShortUrl]:
         return [
             ShortUrl.model_validate_json(value)
@@ -76,11 +84,7 @@ class ShortUrlStorage(BaseModel):
         short_url = ShortUrl(
             **short_url_in.model_dump(),
         )
-        redis.hset(
-            name=config.REDIS_SHORT_URLS_HASH_NAME,
-            key=short_url.slug,
-            value=short_url_in.model_dump_json(),
-        )
+        self.save_short_url(short_url)
         # self.slug_to_short_url[short_url.slug] = short_url
         log.info("Created short url")
         return short_url
@@ -100,6 +104,7 @@ class ShortUrlStorage(BaseModel):
     ) -> ShortUrl:
         for field_name, value in short_url_in:
             setattr(short_url, field_name, value)
+        self.save_short_url(short_url)
         # self.save_state()
         log.info("Update short url")
         return short_url
@@ -112,6 +117,7 @@ class ShortUrlStorage(BaseModel):
         for field_name, value in short_url_in.model_dump(exclude_unset=True).items():
             setattr(short_url, field_name, value)
         # self.save_state()
+        self.save_short_url(short_url)
         log.info("Update_partial short url")
         return short_url
 
