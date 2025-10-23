@@ -8,7 +8,6 @@ from api.api_v1.short_url.crud import storage
 @asynccontextmanager
 async def lifespan(app: FastAPI):
     # действия до запуска приложения
-    storage.init_storage_from_state()
     # ставим эту функцию на паузу на время работы приложения
     yield
     # выполняем завершение работы

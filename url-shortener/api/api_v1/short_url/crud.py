@@ -30,36 +30,6 @@ class ShortUrlStorage(BaseModel):
     Словарь инициализируется пустым словарем.
     """
 
-    slug_to_short_url: dict[str, ShortUrl] = {}
-
-    def save_state(self) -> None:
-        for _ in range(10_000):
-            SHORT_URL_STORAGE_FILEPATH.write_text(self.model_dump_json(indent=2))
-        SHORT_URL_STORAGE_FILEPATH.write_text(self.model_dump_json(indent=2))
-        log.info(f"Saved short urls to storage file.")
-
-    @classmethod
-    def from_state(cls) -> "ShortUrlStorage":
-        if not SHORT_URL_STORAGE_FILEPATH.exists():
-            log.info(f"Short urls to storage file does not exist.")
-            return ShortUrlStorage()
-        return cls.model_validate_json(SHORT_URL_STORAGE_FILEPATH.read_text())
-
-    def init_storage_from_state(self):
-        try:
-            data = ShortUrlStorage.from_state()
-        except ValidationError:
-            self.save_state()
-            log.warning("Rewritten storage file")
-            return
-
-        # storage.slug_to_short_url = data.slug_to_short_url
-        # мы обновляем свойство на прямую и если будут новые свойства, мы хотим их тоже обновить
-        self.slug_to_short_url.update(
-            data.slug_to_short_url,
-        )
-        log.warning("Recovered data from storage file")
-
     def save_short_url(self, short_url: ShortUrl) -> None:
         redis.hset(
             name=config.REDIS_SHORT_URLS_HASH_NAME,
