@@ -4,7 +4,7 @@ import typer
 from rich import print
 from rich.markdown import Markdown
 
-from api.api_v1.auth.services import redis_tokens
+from api.api_v1.auth.services import redis_tokens as tokens
 
 app = typer.Typer(
     name="token",
@@ -30,7 +30,7 @@ def chek(
         f"Token [bold]{token}[/bold]",
         (
             "[green]exists[/green]"
-            if redis_tokens.token_exists(token)
+            if tokens.token_exists(token)
             else "[red]dosen't exists[/red]"
         ),
     )
@@ -44,5 +44,51 @@ def list_tokens():
     List all tokens.
     """
     print(Markdown("# Available API Tokens"))
-    print(Markdown("\n- ".join(([""] + redis_tokens.get_tokens()))))
+    print(Markdown("\n- ".join(([""] + tokens.get_tokens()))))
     print()
+
+
+@app.command(
+    name="rm",
+)
+def delete_token(
+    token: Annotated[
+        str,
+        typer.Argument(
+            help="The token to check",
+        ),
+    ],
+):
+    """
+    Delete a token from DB.
+    """
+    if not tokens.token_exists(token):
+        print(f"[bold]{token} [red]doesn't exist[/red][/bold]")
+
+    tokens.delete_token(token)
+    print(f"Token [bold]{token}[/bold] removed from DB")
+
+
+@app.command()
+def create():
+    """
+    Create a new token.
+    """
+    new_token = tokens.generate_and_save_token()
+    print(f"New token [bold]{new_token}[/bold] saved to DB")
+
+
+@app.command()
+def add(
+    token: Annotated[
+        str,
+        typer.Argument(
+            help="The token to add",
+        ),
+    ],
+):
+    """
+    Add a new token.
+    """
+    tokens.add_token(token)
+    print(f"New token [bold]{token}[/bold] added to DB")
