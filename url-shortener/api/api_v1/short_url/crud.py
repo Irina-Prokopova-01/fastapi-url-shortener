@@ -1,7 +1,11 @@
+__all__ = ("storage",)
+
 import logging
+from typing import cast, Iterable
 
 from pydantic import BaseModel, AnyHttpUrl, ValidationError, validate_email
-from pygments.lexers import data
+
+# from pygments.lexers import data
 from redis import Redis
 
 from core import config
@@ -52,7 +56,9 @@ class ShortUrlStorage(BaseModel):
     def get(self) -> list[ShortUrl]:
         return [
             ShortUrl.model_validate_json(value)
-            for value in redis.hvals(name=config.REDIS_SHORT_URLS_HASH_NAME)
+            for value in cast(
+                Iterable[str], redis.hvals(name=config.REDIS_SHORT_URLS_HASH_NAME)
+            )
         ]
 
     def get_by_slug(self, slug: str) -> ShortUrl | None:
@@ -60,15 +66,20 @@ class ShortUrlStorage(BaseModel):
             name=config.REDIS_SHORT_URLS_HASH_NAME,
             key=slug,
         ):
+            assert isinstance(data, str)
             return ShortUrl.model_validate_json(data)
+        return None
 
     def exists(
         self,
         slug: str,
     ) -> bool:
-        return redis.hexists(
-            name=config.REDIS_SHORT_URLS_HASH_NAME,
-            key=slug,
+        return cast(
+            bool,
+            redis.hexists(
+                name=config.REDIS_SHORT_URLS_HASH_NAME,
+                key=slug,
+            ),
         )
 
     def create(self, short_url_in: ShortUrlCreate) -> ShortUrl:
@@ -115,7 +126,7 @@ class ShortUrlStorage(BaseModel):
         self,
         short_url: ShortUrl,
         short_url_in: ShortUrlPartialUpdate,
-    ):
+    ) -> ShortUrl:
         for field_name, value in short_url_in.model_dump(exclude_unset=True).items():
             setattr(short_url, field_name, value)
         # self.save_state()

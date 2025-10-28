@@ -1,3 +1,5 @@
+__all__ = ("app",)
+
 from typing import Annotated
 
 import typer
@@ -22,7 +24,7 @@ def chek(
             help="The token to check",
         ),
     ],
-):
+) -> None:
     """
     Chek if the passed token is valid - exists or not.
     """
@@ -39,7 +41,7 @@ def chek(
 @app.command(
     name="list",
 )
-def list_tokens():
+def list_tokens() -> None:
     """
     List all tokens.
     """
@@ -58,7 +60,7 @@ def delete_token(
             help="The token to check",
         ),
     ],
-):
+) -> None:
     """
     Delete a token from DB.
     """
@@ -70,7 +72,7 @@ def delete_token(
 
 
 @app.command()
-def create():
+def create() -> None:
     """
     Create a new token.
     """
@@ -86,7 +88,7 @@ def add(
             help="The token to add",
         ),
     ],
-):
+) -> None:
     """
     Add a new token.
     """

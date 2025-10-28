@@ -39,7 +39,7 @@ ShortUrlBySlug = Annotated[
 
 
 @router.get("/", response_model=ShortUrlRead)
-def read_short_url_detail(url: ShortUrlBySlug):
+def read_short_url_detail(url: ShortUrlBySlug) -> ShortUrl:
     return url
 
 
@@ -50,7 +50,7 @@ def read_short_url_detail(url: ShortUrlBySlug):
 def update_short_url_details(
     url: ShortUrlBySlug,
     short_url_in: ShortUrlUpdate,
-):
+) -> ShortUrl:
     return storage.update(
         short_url=url,
         short_url_in=short_url_in,
