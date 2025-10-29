@@ -24,7 +24,7 @@ router = APIRouter(
                 "application/json": {
                     "example": {
                         "detail": "URL 'slug' not found",
-                    }
+                    },
                 },
             },
         },
