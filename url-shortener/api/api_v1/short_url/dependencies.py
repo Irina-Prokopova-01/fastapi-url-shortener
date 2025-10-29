@@ -64,7 +64,6 @@ def validate_api_token(
         api_token.credentials,
     ):
         return
-        # if api_token.credentials not in API_TOKENS:
     raise HTTPException(
         status_code=status.HTTP_401_UNAUTHORIZED,
         detail="Invalid API token",

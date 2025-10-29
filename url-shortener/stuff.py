@@ -17,7 +17,7 @@ def add(a: int, b: int) -> int:
     return a + b
 
 
-def main():
+def main() -> None:
     a = 1
     b = 2
     c = add(a, b)
