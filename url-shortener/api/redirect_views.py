@@ -1,12 +1,13 @@
 from typing import Annotated
+
 from fastapi import (
-    Depends,
     APIRouter,
+    Depends,
 )
 from fastapi.responses import RedirectResponse
 
-from schemas.short_url import ShortUrl
 from api.api_v1.short_url.dependencies import prefetch_short_url
+from schemas.short_url import ShortUrl
 
 router = APIRouter(
     prefix="/r",

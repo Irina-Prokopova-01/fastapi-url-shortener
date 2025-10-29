@@ -1,20 +1,19 @@
 __all__ = ("storage",)
 
 import logging
-from typing import cast, Iterable
+from typing import Iterable, cast
 
-from pydantic import BaseModel, AnyHttpUrl, ValidationError, validate_email
+from pydantic import BaseModel
 
 # from pygments.lexers import data
 from redis import Redis
 
 from core import config
-from core.config import SHORT_URL_STORAGE_FILEPATH
 from schemas.short_url import (
     ShortUrl,
     ShortUrlCreate,
-    ShortUrlUpdate,
     ShortUrlPartialUpdate,
+    ShortUrlUpdate,
 )
 
 log = logging.getLogger(__name__)

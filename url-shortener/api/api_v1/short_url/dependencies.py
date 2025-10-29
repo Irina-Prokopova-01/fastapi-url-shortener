@@ -3,30 +3,23 @@ from typing import Annotated
 
 from fastapi import (
     HTTPException,
-    status,
-    BackgroundTasks,
     Request,
-    Header,
+    status,
 )
 from fastapi.params import Depends
-
 from fastapi.security import (
     HTTPAuthorizationCredentials,
-    HTTPBearer,
     HTTPBasic,
     HTTPBasicCredentials,
+    HTTPBearer,
 )
 
-from core.config import (
-    # API_TOKENS,
-    USERS_DB,
-    REDIS_TOKENS_SET_NAME,
-)
+from api.api_v1.auth.services import redis_tokens, redis_users
 
 # from api.api_v1.short_url.views import SHORT_URLS
 from schemas.short_url import ShortUrl
+
 from .crud import storage
-from api.api_v1.auth.services import redis_tokens, redis_users
 
 log = logging.getLogger(__name__)
 
