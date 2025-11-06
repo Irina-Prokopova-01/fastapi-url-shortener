@@ -1,0 +1,3673 @@
+{
+  "meta": {
+    "format": 3,
+    "version": "7.11.0",
+    "timestamp": "2025-11-06T15:02:34.208789",
+    "branch_coverage": false,
+    "show_contexts": false
+  },
+  "files": {
+    "api\\__init__.py": {
+      "executed_lines": [
+        1,
+        3,
+        5,
+        9
+      ],
+      "summary": {
+        "covered_lines": 4,
+        "num_statements": 4,
+        "percent_covered": 100.0,
+        "percent_covered_display": "100",
+        "missing_lines": 0,
+        "excluded_lines": 0
+      },
+      "missing_lines": [],
+      "excluded_lines": [],
+      "functions": {
+        "": {
+          "executed_lines": [
+            1,
+            3,
+            5,
+            9
+          ],
+          "summary": {
+            "covered_lines": 4,
+            "num_statements": 4,
+            "percent_covered": 100.0,
+            "percent_covered_display": "100",
+            "missing_lines": 0,
+            "excluded_lines": 0
+          },
+          "missing_lines": [],
+          "excluded_lines": []
+        }
+      },
+      "classes": {
+        "": {
+          "executed_lines": [
+            1,
+            3,
+            5,
+            9
+          ],
+          "summary": {
+            "covered_lines": 4,
+            "num_statements": 4,
+            "percent_covered": 100.0,
+            "percent_covered_display": "100",
+            "missing_lines": 0,
+            "excluded_lines": 0
+          },
+          "missing_lines": [],
+          "excluded_lines": []
+        }
+      }
+    },
+    "api\\api_v1\\__init__.py": {
+      "executed_lines": [
+        1,
+        3,
+        5,
+        9
+      ],
+      "summary": {
+        "covered_lines": 4,
+        "num_statements": 4,
+        "percent_covered": 100.0,
+        "percent_covered_display": "100",
+        "missing_lines": 0,
+        "excluded_lines": 0
+      },
+      "missing_lines": [],
+      "excluded_lines": [],
+      "functions": {
+        "": {
+          "executed_lines": [
+            1,
+            3,
+            5,
+            9
+          ],
+          "summary": {
+            "covered_lines": 4,
+            "num_statements": 4,
+            "percent_covered": 100.0,
+            "percent_covered_display": "100",
+            "missing_lines": 0,
+            "excluded_lines": 0
+          },
+          "missing_lines": [],
+          "excluded_lines": []
+        }
+      },
+      "classes": {
+        "": {
+          "executed_lines": [
+            1,
+            3,
+            5,
+            9
+          ],
+          "summary": {
+            "covered_lines": 4,
+            "num_statements": 4,
+            "percent_covered": 100.0,
+            "percent_covered_display": "100",
+            "missing_lines": 0,
+            "excluded_lines": 0
+          },
+          "missing_lines": [],
+          "excluded_lines": []
+        }
+      }
+    },
+    "api\\api_v1\\auth\\__init__.py": {
+      "executed_lines": [
+        0
+      ],
+      "summary": {
+        "covered_lines": 0,
+        "num_statements": 0,
+        "percent_covered": 100.0,
+        "percent_covered_display": "100",
+        "missing_lines": 0,
+        "excluded_lines": 0
+      },
+      "missing_lines": [],
+      "excluded_lines": [],
+      "functions": {
+        "": {
+          "executed_lines": [],
+          "summary": {
+            "covered_lines": 0,
+            "num_statements": 0,
+            "percent_covered": 100.0,
+            "percent_covered_display": "100",
+            "missing_lines": 0,
+            "excluded_lines": 0
+          },
+          "missing_lines": [],
+          "excluded_lines": []
+        }
+      },
+      "classes": {
+        "": {
+          "executed_lines": [],
+          "summary": {
+            "covered_lines": 0,
+            "num_statements": 0,
+            "percent_covered": 100.0,
+            "percent_covered_display": "100",
+            "missing_lines": 0,
+            "excluded_lines": 0
+          },
+          "missing_lines": [],
+          "excluded_lines": []
+        }
+      }
+    },
+    "api\\api_v1\\auth\\services\\__init__.py": {
+      "executed_lines": [
+        1,
+        5,
+        6
+      ],
+      "summary": {
+        "covered_lines": 3,
+        "num_statements": 3,
+        "percent_covered": 100.0,
+        "percent_covered_display": "100",
+        "missing_lines": 0,
+        "excluded_lines": 0
+      },
+      "missing_lines": [],
+      "excluded_lines": [],
+      "functions": {
+        "": {
+          "executed_lines": [
+            1,
+            5,
+            6
+          ],
+          "summary": {
+            "covered_lines": 3,
+            "num_statements": 3,
+            "percent_covered": 100.0,
+            "percent_covered_display": "100",
+            "missing_lines": 0,
+            "excluded_lines": 0
+          },
+          "missing_lines": [],
+          "excluded_lines": []
+        }
+      },
+      "classes": {
+        "": {
+          "executed_lines": [
+            1,
+            5,
+            6
+          ],
+          "summary": {
+            "covered_lines": 3,
+            "num_statements": 3,
+            "percent_covered": 100.0,
+            "percent_covered_display": "100",
+            "missing_lines": 0,
+            "excluded_lines": 0
+          },
+          "missing_lines": [],
+          "excluded_lines": []
+        }
+      }
+    },
+    "api\\api_v1\\auth\\services\\redis_tokens_helper.py": {
+      "executed_lines": [
+        1,
+        3,
+        5,
+        7,
+        8,
+        11,
+        12,
+        19,
+        25,
+        27,
+        35,
+        38,
+        41,
+        45
+      ],
+      "summary": {
+        "covered_lines": 14,
+        "num_statements": 18,
+        "percent_covered": 77.77777777777777,
+        "percent_covered_display": "78",
+        "missing_lines": 4,
+        "excluded_lines": 0
+      },
+      "missing_lines": [
+        28,
+        36,
+        39,
+        42
+      ],
+      "excluded_lines": [],
+      "functions": {
+        "RedisTokensHelper.__init__": {
+          "executed_lines": [
+            19,
+            25
+          ],
+          "summary": {
+            "covered_lines": 2,
+            "num_statements": 2,
+            "percent_covered": 100.0,
+            "percent_covered_display": "100",
+            "missing_lines": 0,
+            "excluded_lines": 0
+          },
+          "missing_lines": [],
+          "excluded_lines": []
+        },
+        "RedisTokensHelper.token_exists": {
+          "executed_lines": [],
+          "summary": {
+            "covered_lines": 0,
+            "num_statements": 1,
+            "percent_covered": 0.0,
+            "percent_covered_display": "0",
+            "missing_lines": 1,
+            "excluded_lines": 0
+          },
+          "missing_lines": [
+            28
+          ],
+          "excluded_lines": []
+        },
+        "RedisTokensHelper.add_token": {
+          "executed_lines": [],
+          "summary": {
+            "covered_lines": 0,
+            "num_statements": 1,
+            "percent_covered": 0.0,
+            "percent_covered_display": "0",
+            "missing_lines": 1,
+            "excluded_lines": 0
+          },
+          "missing_lines": [
+            36
+          ],
+          "excluded_lines": []
+        },
+        "RedisTokensHelper.get_tokens": {
+          "executed_lines": [],
+          "summary": {
+            "covered_lines": 0,
+            "num_statements": 1,
+            "percent_covered": 0.0,
+            "percent_covered_display": "0",
+            "missing_lines": 1,
+            "excluded_lines": 0
+          },
+          "missing_lines": [
+            39
+          ],
+          "excluded_lines": []
+        },
+        "RedisTokensHelper.delete_token": {
+          "executed_lines": [],
+          "summary": {
+            "covered_lines": 0,
+            "num_statements": 1,
+            "percent_covered": 0.0,
+            "percent_covered_display": "0",
+            "missing_lines": 1,
+            "excluded_lines": 0
+          },
+          "missing_lines": [
+            42
+          ],
+          "excluded_lines": []
+        },
+        "": {
+          "executed_lines": [
+            1,
+            3,
+            5,
+            7,
+            8,
+            11,
+            12,
+            27,
+            35,
+            38,
+            41,
+            45
+          ],
+          "summary": {
+            "covered_lines": 12,
+            "num_statements": 12,
+            "percent_covered": 100.0,
+            "percent_covered_display": "100",
+            "missing_lines": 0,
+            "excluded_lines": 0
+          },
+          "missing_lines": [],
+          "excluded_lines": []
+        }
+      },
+      "classes": {
+        "RedisTokensHelper": {
+          "executed_lines": [
+            19,
+            25
+          ],
+          "summary": {
+            "covered_lines": 2,
+            "num_statements": 6,
+            "percent_covered": 33.333333333333336,
+            "percent_covered_display": "33",
+            "missing_lines": 4,
+            "excluded_lines": 0
+          },
+          "missing_lines": [
+            28,
+            36,
+            39,
+            42
+          ],
+          "excluded_lines": []
+        },
+        "": {
+          "executed_lines": [
+            1,
+            3,
+            5,
+            7,
+            8,
+            11,
+            12,
+            27,
+            35,
+            38,
+            41,
+            45
+          ],
+          "summary": {
+            "covered_lines": 12,
+            "num_statements": 12,
+            "percent_covered": 100.0,
+            "percent_covered_display": "100",
+            "missing_lines": 0,
+            "excluded_lines": 0
+          },
+          "missing_lines": [],
+          "excluded_lines": []
+        }
+      }
+    },
+    "api\\api_v1\\auth\\services\\redis_users_helper.py": {
+      "executed_lines": [
+        1,
+        3,
+        5,
+        6,
+        9,
+        10,
+        16,
+        23,
+        33
+      ],
+      "summary": {
+        "covered_lines": 9,
+        "num_statements": 10,
+        "percent_covered": 90.0,
+        "percent_covered_display": "90",
+        "missing_lines": 1,
+        "excluded_lines": 0
+      },
+      "missing_lines": [
+        27
+      ],
+      "excluded_lines": [],
+      "functions": {
+        "RedisUsersHelper.__init__": {
+          "executed_lines": [
+            16
+          ],
+          "summary": {
+            "covered_lines": 1,
+            "num_statements": 1,
+            "percent_covered": 100.0,
+            "percent_covered_display": "100",
+            "missing_lines": 0,
+            "excluded_lines": 0
+          },
+          "missing_lines": [],
+          "excluded_lines": []
+        },
+        "RedisUsersHelper.get_user_password": {
+          "executed_lines": [],
+          "summary": {
+            "covered_lines": 0,
+            "num_statements": 1,
+            "percent_covered": 0.0,
+            "percent_covered_display": "0",
+            "missing_lines": 1,
+            "excluded_lines": 0
+          },
+          "missing_lines": [
+            27
+          ],
+          "excluded_lines": []
+        },
+        "": {
+          "executed_lines": [
+            1,
+            3,
+            5,
+            6,
+            9,
+            10,
+            23,
+            33
+          ],
+          "summary": {
+            "covered_lines": 8,
+            "num_statements": 8,
+            "percent_covered": 100.0,
+            "percent_covered_display": "100",
+            "missing_lines": 0,
+            "excluded_lines": 0
+          },
+          "missing_lines": [],
+          "excluded_lines": []
+        }
+      },
+      "classes": {
+        "RedisUsersHelper": {
+          "executed_lines": [
+            16
+          ],
+          "summary": {
+            "covered_lines": 1,
+            "num_statements": 2,
+            "percent_covered": 50.0,
+            "percent_covered_display": "50",
+            "missing_lines": 1,
+            "excluded_lines": 0
+          },
+          "missing_lines": [
+            27
+          ],
+          "excluded_lines": []
+        },
+        "": {
+          "executed_lines": [
+            1,
+            3,
+            5,
+            6,
+            9,
+            10,
+            23,
+            33
+          ],
+          "summary": {
+            "covered_lines": 8,
+            "num_statements": 8,
+            "percent_covered": 100.0,
+            "percent_covered_display": "100",
+            "missing_lines": 0,
+            "excluded_lines": 0
+          },
+          "missing_lines": [],
+          "excluded_lines": []
+        }
+      }
+    },
+    "api\\api_v1\\auth\\services\\tokens_helper.py": {
+      "executed_lines": [
+        1,
+        2,
+        5,
+        6,
+        13,
+        14,
+        25,
+        26,
+        37,
+        38,
+        41,
+        46,
+        47,
+        55,
+        56
+      ],
+      "summary": {
+        "covered_lines": 14,
+        "num_statements": 18,
+        "percent_covered": 77.77777777777777,
+        "percent_covered_display": "78",
+        "missing_lines": 4,
+        "excluded_lines": 0
+      },
+      "missing_lines": [
+        39,
+        42,
+        43,
+        44
+      ],
+      "excluded_lines": [],
+      "functions": {
+        "AbstractTokensHelper.token_exists": {
+          "executed_lines": [],
+          "summary": {
+            "covered_lines": 0,
+            "num_statements": 0,
+            "percent_covered": 100.0,
+            "percent_covered_display": "100",
+            "missing_lines": 0,
+            "excluded_lines": 0
+          },
+          "missing_lines": [],
+          "excluded_lines": []
+        },
+        "AbstractTokensHelper.add_token": {
+          "executed_lines": [],
+          "summary": {
+            "covered_lines": 0,
+            "num_statements": 0,
+            "percent_covered": 100.0,
+            "percent_covered_display": "100",
+            "missing_lines": 0,
+            "excluded_lines": 0
+          },
+          "missing_lines": [],
+          "excluded_lines": []
+        },
+        "AbstractTokensHelper.generate_token": {
+          "executed_lines": [],
+          "summary": {
+            "covered_lines": 0,
+            "num_statements": 1,
+            "percent_covered": 0.0,
+            "percent_covered_display": "0",
+            "missing_lines": 1,
+            "excluded_lines": 0
+          },
+          "missing_lines": [
+            39
+          ],
+          "excluded_lines": []
+        },
+        "AbstractTokensHelper.generate_and_save_token": {
+          "executed_lines": [],
+          "summary": {
+            "covered_lines": 0,
+            "num_statements": 3,
+            "percent_covered": 0.0,
+            "percent_covered_display": "0",
+            "missing_lines": 3,
+            "excluded_lines": 0
+          },
+          "missing_lines": [
+            42,
+            43,
+            44
+          ],
+          "excluded_lines": []
+        },
+        "AbstractTokensHelper.get_tokens": {
+          "executed_lines": [],
+          "summary": {
+            "covered_lines": 0,
+            "num_statements": 0,
+            "percent_covered": 100.0,
+            "percent_covered_display": "100",
+            "missing_lines": 0,
+            "excluded_lines": 0
+          },
+          "missing_lines": [],
+          "excluded_lines": []
+        },
+        "AbstractTokensHelper.delete_token": {
+          "executed_lines": [],
+          "summary": {
+            "covered_lines": 0,
+            "num_statements": 0,
+            "percent_covered": 100.0,
+            "percent_covered_display": "100",
+            "missing_lines": 0,
+            "excluded_lines": 0
+          },
+          "missing_lines": [],
+          "excluded_lines": []
+        },
+        "": {
+          "executed_lines": [
+            1,
+            2,
+            5,
+            6,
+            13,
+            14,
+            25,
+            26,
+            37,
+            38,
+            41,
+            46,
+            47,
+            55,
+            56
+          ],
+          "summary": {
+            "covered_lines": 14,
+            "num_statements": 14,
+            "percent_covered": 100.0,
+            "percent_covered_display": "100",
+            "missing_lines": 0,
+            "excluded_lines": 0
+          },
+          "missing_lines": [],
+          "excluded_lines": []
+        }
+      },
+      "classes": {
+        "AbstractTokensHelper": {
+          "executed_lines": [],
+          "summary": {
+            "covered_lines": 0,
+            "num_statements": 4,
+            "percent_covered": 0.0,
+            "percent_covered_display": "0",
+            "missing_lines": 4,
+            "excluded_lines": 0
+          },
+          "missing_lines": [
+            39,
+            42,
+            43,
+            44
+          ],
+          "excluded_lines": []
+        },
+        "": {
+          "executed_lines": [
+            1,
+            2,
+            5,
+            6,
+            13,
+            14,
+            25,
+            26,
+            37,
+            38,
+            41,
+            46,
+            47,
+            55,
+            56
+          ],
+          "summary": {
+            "covered_lines": 14,
+            "num_statements": 14,
+            "percent_covered": 100.0,
+            "percent_covered_display": "100",
+            "missing_lines": 0,
+            "excluded_lines": 0
+          },
+          "missing_lines": [],
+          "excluded_lines": []
+        }
+      }
+    },
+    "api\\api_v1\\auth\\services\\users_helper.py": {
+      "executed_lines": [
+        1,
+        4,
+        5,
+        11,
+        12,
+        24,
+        25,
+        35
+      ],
+      "summary": {
+        "covered_lines": 7,
+        "num_statements": 12,
+        "percent_covered": 58.333333333333336,
+        "percent_covered_display": "58",
+        "missing_lines": 5,
+        "excluded_lines": 0
+      },
+      "missing_lines": [
+        33,
+        46,
+        47,
+        48,
+        49
+      ],
+      "excluded_lines": [],
+      "functions": {
+        "AbstractUsersHelper.get_user_password": {
+          "executed_lines": [],
+          "summary": {
+            "covered_lines": 0,
+            "num_statements": 0,
+            "percent_covered": 100.0,
+            "percent_covered_display": "100",
+            "missing_lines": 0,
+            "excluded_lines": 0
+          },
+          "missing_lines": [],
+          "excluded_lines": []
+        },
+        "AbstractUsersHelper.check_passwords_math": {
+          "executed_lines": [],
+          "summary": {
+            "covered_lines": 0,
+            "num_statements": 1,
+            "percent_covered": 0.0,
+            "percent_covered_display": "0",
+            "missing_lines": 1,
+            "excluded_lines": 0
+          },
+          "missing_lines": [
+            33
+          ],
+          "excluded_lines": []
+        },
+        "AbstractUsersHelper.validate_user_password": {
+          "executed_lines": [],
+          "summary": {
+            "covered_lines": 0,
+            "num_statements": 4,
+            "percent_covered": 0.0,
+            "percent_covered_display": "0",
+            "missing_lines": 4,
+            "excluded_lines": 0
+          },
+          "missing_lines": [
+            46,
+            47,
+            48,
+            49
+          ],
+          "excluded_lines": []
+        },
+        "": {
+          "executed_lines": [
+            1,
+            4,
+            5,
+            11,
+            12,
+            24,
+            25,
+            35
+          ],
+          "summary": {
+            "covered_lines": 7,
+            "num_statements": 7,
+            "percent_covered": 100.0,
+            "percent_covered_display": "100",
+            "missing_lines": 0,
+            "excluded_lines": 0
+          },
+          "missing_lines": [],
+          "excluded_lines": []
+        }
+      },
+      "classes": {
+        "AbstractUsersHelper": {
+          "executed_lines": [],
+          "summary": {
+            "covered_lines": 0,
+            "num_statements": 5,
+            "percent_covered": 0.0,
+            "percent_covered_display": "0",
+            "missing_lines": 5,
+            "excluded_lines": 0
+          },
+          "missing_lines": [
+            33,
+            46,
+            47,
+            48,
+            49
+          ],
+          "excluded_lines": []
+        },
+        "": {
+          "executed_lines": [
+            1,
+            4,
+            5,
+            11,
+            12,
+            24,
+            25,
+            35
+          ],
+          "summary": {
+            "covered_lines": 7,
+            "num_statements": 7,
+            "percent_covered": 100.0,
+            "percent_covered_display": "100",
+            "missing_lines": 0,
+            "excluded_lines": 0
+          },
+          "missing_lines": [],
+          "excluded_lines": []
+        }
+      }
+    },
+    "api\\api_v1\\short_url\\__init__.py": {
+      "executed_lines": [
+        0
+      ],
+      "summary": {
+        "covered_lines": 0,
+        "num_statements": 0,
+        "percent_covered": 100.0,
+        "percent_covered_display": "100",
+        "missing_lines": 0,
+        "excluded_lines": 0
+      },
+      "missing_lines": [],
+      "excluded_lines": [],
+      "functions": {
+        "": {
+          "executed_lines": [],
+          "summary": {
+            "covered_lines": 0,
+            "num_statements": 0,
+            "percent_covered": 100.0,
+            "percent_covered_display": "100",
+            "missing_lines": 0,
+            "excluded_lines": 0
+          },
+          "missing_lines": [],
+          "excluded_lines": []
+        }
+      },
+      "classes": {
+        "": {
+          "executed_lines": [],
+          "summary": {
+            "covered_lines": 0,
+            "num_statements": 0,
+            "percent_covered": 100.0,
+            "percent_covered_display": "100",
+            "missing_lines": 0,
+            "excluded_lines": 0
+          },
+          "missing_lines": [],
+          "excluded_lines": []
+        }
+      }
+    },
+    "api\\api_v1\\short_url\\crud.py": {
+      "executed_lines": [
+        1,
+        8,
+        10,
+        11,
+        12,
+        14,
+        15,
+        17,
+        18,
+        25,
+        27,
+        35,
+        37,
+        44,
+        53,
+        63,
+        71,
+        77,
+        80,
+        90,
+        101
+      ],
+      "summary": {
+        "covered_lines": 20,
+        "num_statements": 40,
+        "percent_covered": 50.0,
+        "percent_covered_display": "50",
+        "missing_lines": 20,
+        "excluded_lines": 0
+      },
+      "missing_lines": [
+        38,
+        45,
+        54,
+        58,
+        59,
+        61,
+        64,
+        67,
+        68,
+        69,
+        72,
+        78,
+        85,
+        86,
+        87,
+        88,
+        95,
+        96,
+        97,
+        98
+      ],
+      "excluded_lines": [],
+      "functions": {
+        "ShortUrlsStorage.save_short_url": {
+          "executed_lines": [],
+          "summary": {
+            "covered_lines": 0,
+            "num_statements": 1,
+            "percent_covered": 0.0,
+            "percent_covered_display": "0",
+            "missing_lines": 1,
+            "excluded_lines": 0
+          },
+          "missing_lines": [
+            38
+          ],
+          "excluded_lines": []
+        },
+        "ShortUrlsStorage.get": {
+          "executed_lines": [],
+          "summary": {
+            "covered_lines": 0,
+            "num_statements": 1,
+            "percent_covered": 0.0,
+            "percent_covered_display": "0",
+            "missing_lines": 1,
+            "excluded_lines": 0
+          },
+          "missing_lines": [
+            45
+          ],
+          "excluded_lines": []
+        },
+        "ShortUrlsStorage.get_by_slug": {
+          "executed_lines": [],
+          "summary": {
+            "covered_lines": 0,
+            "num_statements": 4,
+            "percent_covered": 0.0,
+            "percent_covered_display": "0",
+            "missing_lines": 4,
+            "excluded_lines": 0
+          },
+          "missing_lines": [
+            54,
+            58,
+            59,
+            61
+          ],
+          "excluded_lines": []
+        },
+        "ShortUrlsStorage.create": {
+          "executed_lines": [],
+          "summary": {
+            "covered_lines": 0,
+            "num_statements": 4,
+            "percent_covered": 0.0,
+            "percent_covered_display": "0",
+            "missing_lines": 4,
+            "excluded_lines": 0
+          },
+          "missing_lines": [
+            64,
+            67,
+            68,
+            69
+          ],
+          "excluded_lines": []
+        },
+        "ShortUrlsStorage.delete_by_slug": {
+          "executed_lines": [],
+          "summary": {
+            "covered_lines": 0,
+            "num_statements": 1,
+            "percent_covered": 0.0,
+            "percent_covered_display": "0",
+            "missing_lines": 1,
+            "excluded_lines": 0
+          },
+          "missing_lines": [
+            72
+          ],
+          "excluded_lines": []
+        },
+        "ShortUrlsStorage.delete": {
+          "executed_lines": [],
+          "summary": {
+            "covered_lines": 0,
+            "num_statements": 1,
+            "percent_covered": 0.0,
+            "percent_covered_display": "0",
+            "missing_lines": 1,
+            "excluded_lines": 0
+          },
+          "missing_lines": [
+            78
+          ],
+          "excluded_lines": []
+        },
+        "ShortUrlsStorage.update": {
+          "executed_lines": [],
+          "summary": {
+            "covered_lines": 0,
+            "num_statements": 4,
+            "percent_covered": 0.0,
+            "percent_covered_display": "0",
+            "missing_lines": 4,
+            "excluded_lines": 0
+          },
+          "missing_lines": [
+            85,
+            86,
+            87,
+            88
+          ],
+          "excluded_lines": []
+        },
+        "ShortUrlsStorage.update_partial": {
+          "executed_lines": [],
+          "summary": {
+            "covered_lines": 0,
+            "num_statements": 4,
+            "percent_covered": 0.0,
+            "percent_covered_display": "0",
+            "missing_lines": 4,
+            "excluded_lines": 0
+          },
+          "missing_lines": [
+            95,
+            96,
+            97,
+            98
+          ],
+          "excluded_lines": []
+        },
+        "": {
+          "executed_lines": [
+            1,
+            8,
+            10,
+            11,
+            12,
+            14,
+            15,
+            17,
+            18,
+            25,
+            27,
+            35,
+            37,
+            44,
+            53,
+            63,
+            71,
+            77,
+            80,
+            90,
+            101
+          ],
+          "summary": {
+            "covered_lines": 20,
+            "num_statements": 20,
+            "percent_covered": 100.0,
+            "percent_covered_display": "100",
+            "missing_lines": 0,
+            "excluded_lines": 0
+          },
+          "missing_lines": [],
+          "excluded_lines": []
+        }
+      },
+      "classes": {
+        "ShortUrlsStorage": {
+          "executed_lines": [],
+          "summary": {
+            "covered_lines": 0,
+            "num_statements": 20,
+            "percent_covered": 0.0,
+            "percent_covered_display": "0",
+            "missing_lines": 20,
+            "excluded_lines": 0
+          },
+          "missing_lines": [
+            38,
+            45,
+            54,
+            58,
+            59,
+            61,
+            64,
+            67,
+            68,
+            69,
+            72,
+            78,
+            85,
+            86,
+            87,
+            88,
+            95,
+            96,
+            97,
+            98
+          ],
+          "excluded_lines": []
+        },
+        "": {
+          "executed_lines": [
+            1,
+            8,
+            10,
+            11,
+            12,
+            14,
+            15,
+            17,
+            18,
+            25,
+            27,
+            35,
+            37,
+            44,
+            53,
+            63,
+            71,
+            77,
+            80,
+            90,
+            101
+          ],
+          "summary": {
+            "covered_lines": 20,
+            "num_statements": 20,
+            "percent_covered": 100.0,
+            "percent_covered_display": "100",
+            "missing_lines": 0,
+            "excluded_lines": 0
+          },
+          "missing_lines": [],
+          "excluded_lines": []
+        }
+      }
+    },
+    "api\\api_v1\\short_url\\dependencies.py": {
+      "executed_lines": [
+        1,
+        2,
+        4,
+        9,
+        10,
+        17,
+        20,
+        22,
+        24,
+        26,
+        28,
+        34,
+        41,
+        53,
+        66,
+        84,
+        100,
+        114
+      ],
+      "summary": {
+        "covered_lines": 18,
+        "num_statements": 45,
+        "percent_covered": 40.0,
+        "percent_covered_display": "40",
+        "missing_lines": 27,
+        "excluded_lines": 0
+      },
+      "missing_lines": [
+        44,
+        45,
+        46,
+        47,
+        56,
+        59,
+        60,
+        73,
+        74,
+        75,
+        76,
+        77,
+        81,
+        87,
+        91,
+        93,
+        107,
+        108,
+        110,
+        111,
+        125,
+        126,
+        128,
+        129,
+        130,
+        131,
+        133
+      ],
+      "excluded_lines": [],
+      "functions": {
+        "prefetch_short_url": {
+          "executed_lines": [],
+          "summary": {
+            "covered_lines": 0,
+            "num_statements": 4,
+            "percent_covered": 0.0,
+            "percent_covered_display": "0",
+            "missing_lines": 4,
+            "excluded_lines": 0
+          },
+          "missing_lines": [
+            44,
+            45,
+            46,
+            47
+          ],
+          "excluded_lines": []
+        },
+        "validate_api_token": {
+          "executed_lines": [],
+          "summary": {
+            "covered_lines": 0,
+            "num_statements": 3,
+            "percent_covered": 0.0,
+            "percent_covered_display": "0",
+            "missing_lines": 3,
+            "excluded_lines": 0
+          },
+          "missing_lines": [
+            56,
+            59,
+            60
+          ],
+          "excluded_lines": []
+        },
+        "api_token_required_for_unsafe_methods": {
+          "executed_lines": [],
+          "summary": {
+            "covered_lines": 0,
+            "num_statements": 6,
+            "percent_covered": 0.0,
+            "percent_covered_display": "0",
+            "missing_lines": 6,
+            "excluded_lines": 0
+          },
+          "missing_lines": [
+            73,
+            74,
+            75,
+            76,
+            77,
+            81
+          ],
+          "excluded_lines": []
+        },
+        "validate_basic_auth": {
+          "executed_lines": [],
+          "summary": {
+            "covered_lines": 0,
+            "num_statements": 3,
+            "percent_covered": 0.0,
+            "percent_covered_display": "0",
+            "missing_lines": 3,
+            "excluded_lines": 0
+          },
+          "missing_lines": [
+            87,
+            91,
+            93
+          ],
+          "excluded_lines": []
+        },
+        "user_basic_auth_required_for_unsafe_methods": {
+          "executed_lines": [],
+          "summary": {
+            "covered_lines": 0,
+            "num_statements": 4,
+            "percent_covered": 0.0,
+            "percent_covered_display": "0",
+            "missing_lines": 4,
+            "excluded_lines": 0
+          },
+          "missing_lines": [
+            107,
+            108,
+            110,
+            111
+          ],
+          "excluded_lines": []
+        },
+        "api_token_or_user_basic_auth_required_for_unsafe_methods": {
+          "executed_lines": [],
+          "summary": {
+            "covered_lines": 0,
+            "num_statements": 7,
+            "percent_covered": 0.0,
+            "percent_covered_display": "0",
+            "missing_lines": 7,
+            "excluded_lines": 0
+          },
+          "missing_lines": [
+            125,
+            126,
+            128,
+            129,
+            130,
+            131,
+            133
+          ],
+          "excluded_lines": []
+        },
+        "": {
+          "executed_lines": [
+            1,
+            2,
+            4,
+            9,
+            10,
+            17,
+            20,
+            22,
+            24,
+            26,
+            28,
+            34,
+            41,
+            53,
+            66,
+            84,
+            100,
+            114
+          ],
+          "summary": {
+            "covered_lines": 18,
+            "num_statements": 18,
+            "percent_covered": 100.0,
+            "percent_covered_display": "100",
+            "missing_lines": 0,
+            "excluded_lines": 0
+          },
+          "missing_lines": [],
+          "excluded_lines": []
+        }
+      },
+      "classes": {
+        "": {
+          "executed_lines": [
+            1,
+            2,
+            4,
+            9,
+            10,
+            17,
+            20,
+            22,
+            24,
+            26,
+            28,
+            34,
+            41,
+            53,
+            66,
+            84,
+            100,
+            114
+          ],
+          "summary": {
+            "covered_lines": 18,
+            "num_statements": 45,
+            "percent_covered": 40.0,
+            "percent_covered_display": "40",
+            "missing_lines": 27,
+            "excluded_lines": 0
+          },
+          "missing_lines": [
+            44,
+            45,
+            46,
+            47,
+            56,
+            59,
+            60,
+            73,
+            74,
+            75,
+            76,
+            77,
+            81,
+            87,
+            91,
+            93,
+            107,
+            108,
+            110,
+            111,
+            125,
+            126,
+            128,
+            129,
+            130,
+            131,
+            133
+          ],
+          "excluded_lines": []
+        }
+      }
+    },
+    "api\\api_v1\\short_url\\views\\__init__.py": {
+      "executed_lines": [
+        1,
+        3,
+        4,
+        6
+      ],
+      "summary": {
+        "covered_lines": 4,
+        "num_statements": 4,
+        "percent_covered": 100.0,
+        "percent_covered_display": "100",
+        "missing_lines": 0,
+        "excluded_lines": 0
+      },
+      "missing_lines": [],
+      "excluded_lines": [],
+      "functions": {
+        "": {
+          "executed_lines": [
+            1,
+            3,
+            4,
+            6
+          ],
+          "summary": {
+            "covered_lines": 4,
+            "num_statements": 4,
+            "percent_covered": 100.0,
+            "percent_covered_display": "100",
+            "missing_lines": 0,
+            "excluded_lines": 0
+          },
+          "missing_lines": [],
+          "excluded_lines": []
+        }
+      },
+      "classes": {
+        "": {
+          "executed_lines": [
+            1,
+            3,
+            4,
+            6
+          ],
+          "summary": {
+            "covered_lines": 4,
+            "num_statements": 4,
+            "percent_covered": 100.0,
+            "percent_covered_display": "100",
+            "missing_lines": 0,
+            "excluded_lines": 0
+          },
+          "missing_lines": [],
+          "excluded_lines": []
+        }
+      }
+    },
+    "api\\api_v1\\short_url\\views\\details_views.py": {
+      "executed_lines": [
+        1,
+        3,
+        9,
+        10,
+        11,
+        18,
+        34,
+        40,
+        41,
+        45,
+        49,
+        59,
+        63,
+        73,
+        77
+      ],
+      "summary": {
+        "covered_lines": 15,
+        "num_statements": 19,
+        "percent_covered": 78.94736842105263,
+        "percent_covered_display": "79",
+        "missing_lines": 4,
+        "excluded_lines": 0
+      },
+      "missing_lines": [
+        42,
+        53,
+        67,
+        80
+      ],
+      "excluded_lines": [],
+      "functions": {
+        "read_short_url_detail": {
+          "executed_lines": [],
+          "summary": {
+            "covered_lines": 0,
+            "num_statements": 1,
+            "percent_covered": 0.0,
+            "percent_covered_display": "0",
+            "missing_lines": 1,
+            "excluded_lines": 0
+          },
+          "missing_lines": [
+            42
+          ],
+          "excluded_lines": []
+        },
+        "update_short_url_details": {
+          "executed_lines": [],
+          "summary": {
+            "covered_lines": 0,
+            "num_statements": 1,
+            "percent_covered": 0.0,
+            "percent_covered_display": "0",
+            "missing_lines": 1,
+            "excluded_lines": 0
+          },
+          "missing_lines": [
+            53
+          ],
+          "excluded_lines": []
+        },
+        "update_short_url_details_partial": {
+          "executed_lines": [],
+          "summary": {
+            "covered_lines": 0,
+            "num_statements": 1,
+            "percent_covered": 0.0,
+            "percent_covered_display": "0",
+            "missing_lines": 1,
+            "excluded_lines": 0
+          },
+          "missing_lines": [
+            67
+          ],
+          "excluded_lines": []
+        },
+        "delete_short_url": {
+          "executed_lines": [],
+          "summary": {
+            "covered_lines": 0,
+            "num_statements": 1,
+            "percent_covered": 0.0,
+            "percent_covered_display": "0",
+            "missing_lines": 1,
+            "excluded_lines": 0
+          },
+          "missing_lines": [
+            80
+          ],
+          "excluded_lines": []
+        },
+        "": {
+          "executed_lines": [
+            1,
+            3,
+            9,
+            10,
+            11,
+            18,
+            34,
+            40,
+            41,
+            45,
+            49,
+            59,
+            63,
+            73,
+            77
+          ],
+          "summary": {
+            "covered_lines": 15,
+            "num_statements": 15,
+            "percent_covered": 100.0,
+            "percent_covered_display": "100",
+            "missing_lines": 0,
+            "excluded_lines": 0
+          },
+          "missing_lines": [],
+          "excluded_lines": []
+        }
+      },
+      "classes": {
+        "": {
+          "executed_lines": [
+            1,
+            3,
+            9,
+            10,
+            11,
+            18,
+            34,
+            40,
+            41,
+            45,
+            49,
+            59,
+            63,
+            73,
+            77
+          ],
+          "summary": {
+            "covered_lines": 15,
+            "num_statements": 19,
+            "percent_covered": 78.94736842105263,
+            "percent_covered_display": "79",
+            "missing_lines": 4,
+            "excluded_lines": 0
+          },
+          "missing_lines": [
+            42,
+            53,
+            67,
+            80
+          ],
+          "excluded_lines": []
+        }
+      }
+    },
+    "api\\api_v1\\short_url\\views\\list_views.py": {
+      "executed_lines": [
+        1,
+        7,
+        8,
+        11,
+        17,
+        38,
+        42,
+        46,
+        51
+      ],
+      "summary": {
+        "covered_lines": 9,
+        "num_statements": 11,
+        "percent_covered": 81.81818181818181,
+        "percent_covered_display": "82",
+        "missing_lines": 2,
+        "excluded_lines": 0
+      },
+      "missing_lines": [
+        43,
+        54
+      ],
+      "excluded_lines": [],
+      "functions": {
+        "read_short_urls_list": {
+          "executed_lines": [],
+          "summary": {
+            "covered_lines": 0,
+            "num_statements": 1,
+            "percent_covered": 0.0,
+            "percent_covered_display": "0",
+            "missing_lines": 1,
+            "excluded_lines": 0
+          },
+          "missing_lines": [
+            43
+          ],
+          "excluded_lines": []
+        },
+        "create_short_url": {
+          "executed_lines": [],
+          "summary": {
+            "covered_lines": 0,
+            "num_statements": 1,
+            "percent_covered": 0.0,
+            "percent_covered_display": "0",
+            "missing_lines": 1,
+            "excluded_lines": 0
+          },
+          "missing_lines": [
+            54
+          ],
+          "excluded_lines": []
+        },
+        "": {
+          "executed_lines": [
+            1,
+            7,
+            8,
+            11,
+            17,
+            38,
+            42,
+            46,
+            51
+          ],
+          "summary": {
+            "covered_lines": 9,
+            "num_statements": 9,
+            "percent_covered": 100.0,
+            "percent_covered_display": "100",
+            "missing_lines": 0,
+            "excluded_lines": 0
+          },
+          "missing_lines": [],
+          "excluded_lines": []
+        }
+      },
+      "classes": {
+        "": {
+          "executed_lines": [
+            1,
+            7,
+            8,
+            11,
+            17,
+            38,
+            42,
+            46,
+            51
+          ],
+          "summary": {
+            "covered_lines": 9,
+            "num_statements": 11,
+            "percent_covered": 81.81818181818181,
+            "percent_covered_display": "82",
+            "missing_lines": 2,
+            "excluded_lines": 0
+          },
+          "missing_lines": [
+            43,
+            54
+          ],
+          "excluded_lines": []
+        }
+      }
+    },
+    "commands\\__init__.py": {
+      "executed_lines": [
+        1,
+        3
+      ],
+      "summary": {
+        "covered_lines": 2,
+        "num_statements": 2,
+        "percent_covered": 100.0,
+        "percent_covered_display": "100",
+        "missing_lines": 0,
+        "excluded_lines": 0
+      },
+      "missing_lines": [],
+      "excluded_lines": [],
+      "functions": {
+        "": {
+          "executed_lines": [
+            1,
+            3
+          ],
+          "summary": {
+            "covered_lines": 2,
+            "num_statements": 2,
+            "percent_covered": 100.0,
+            "percent_covered_display": "100",
+            "missing_lines": 0,
+            "excluded_lines": 0
+          },
+          "missing_lines": [],
+          "excluded_lines": []
+        }
+      },
+      "classes": {
+        "": {
+          "executed_lines": [
+            1,
+            3
+          ],
+          "summary": {
+            "covered_lines": 2,
+            "num_statements": 2,
+            "percent_covered": 100.0,
+            "percent_covered_display": "100",
+            "missing_lines": 0,
+            "excluded_lines": 0
+          },
+          "missing_lines": [],
+          "excluded_lines": []
+        }
+      }
+    },
+    "commands\\cli.py": {
+      "executed_lines": [
+        1,
+        3,
+        5,
+        6,
+        8,
+        14,
+        15,
+        21,
+        22
+      ],
+      "summary": {
+        "covered_lines": 9,
+        "num_statements": 9,
+        "percent_covered": 100.0,
+        "percent_covered_display": "100",
+        "missing_lines": 0,
+        "excluded_lines": 0
+      },
+      "missing_lines": [],
+      "excluded_lines": [],
+      "functions": {
+        "callback": {
+          "executed_lines": [],
+          "summary": {
+            "covered_lines": 0,
+            "num_statements": 0,
+            "percent_covered": 100.0,
+            "percent_covered_display": "100",
+            "missing_lines": 0,
+            "excluded_lines": 0
+          },
+          "missing_lines": [],
+          "excluded_lines": []
+        },
+        "": {
+          "executed_lines": [
+            1,
+            3,
+            5,
+            6,
+            8,
+            14,
+            15,
+            21,
+            22
+          ],
+          "summary": {
+            "covered_lines": 9,
+            "num_statements": 9,
+            "percent_covered": 100.0,
+            "percent_covered_display": "100",
+            "missing_lines": 0,
+            "excluded_lines": 0
+          },
+          "missing_lines": [],
+          "excluded_lines": []
+        }
+      },
+      "classes": {
+        "": {
+          "executed_lines": [
+            1,
+            3,
+            5,
+            6,
+            8,
+            14,
+            15,
+            21,
+            22
+          ],
+          "summary": {
+            "covered_lines": 9,
+            "num_statements": 9,
+            "percent_covered": 100.0,
+            "percent_covered_display": "100",
+            "missing_lines": 0,
+            "excluded_lines": 0
+          },
+          "missing_lines": [],
+          "excluded_lines": []
+        }
+      }
+    },
+    "commands\\hello.py": {
+      "executed_lines": [
+        1,
+        3,
+        5,
+        6,
+        8,
+        11,
+        12
+      ],
+      "summary": {
+        "covered_lines": 7,
+        "num_statements": 8,
+        "percent_covered": 87.5,
+        "percent_covered_display": "88",
+        "missing_lines": 1,
+        "excluded_lines": 0
+      },
+      "missing_lines": [
+        18
+      ],
+      "excluded_lines": [],
+      "functions": {
+        "hello": {
+          "executed_lines": [],
+          "summary": {
+            "covered_lines": 0,
+            "num_statements": 1,
+            "percent_covered": 0.0,
+            "percent_covered_display": "0",
+            "missing_lines": 1,
+            "excluded_lines": 0
+          },
+          "missing_lines": [
+            18
+          ],
+          "excluded_lines": []
+        },
+        "": {
+          "executed_lines": [
+            1,
+            3,
+            5,
+            6,
+            8,
+            11,
+            12
+          ],
+          "summary": {
+            "covered_lines": 7,
+            "num_statements": 7,
+            "percent_covered": 100.0,
+            "percent_covered_display": "100",
+            "missing_lines": 0,
+            "excluded_lines": 0
+          },
+          "missing_lines": [],
+          "excluded_lines": []
+        }
+      },
+      "classes": {
+        "": {
+          "executed_lines": [
+            1,
+            3,
+            5,
+            6,
+            8,
+            11,
+            12
+          ],
+          "summary": {
+            "covered_lines": 7,
+            "num_statements": 8,
+            "percent_covered": 87.5,
+            "percent_covered_display": "88",
+            "missing_lines": 1,
+            "excluded_lines": 0
+          },
+          "missing_lines": [
+            18
+          ],
+          "excluded_lines": []
+        }
+      }
+    },
+    "commands\\tokens.py": {
+      "executed_lines": [
+        1,
+        3,
+        5,
+        6,
+        7,
+        9,
+        11,
+        19,
+        20,
+        41,
+        44,
+        53,
+        56,
+        74,
+        75,
+        83,
+        84
+      ],
+      "summary": {
+        "covered_lines": 17,
+        "num_statements": 29,
+        "percent_covered": 58.62068965517241,
+        "percent_covered_display": "59",
+        "missing_lines": 12,
+        "excluded_lines": 0
+      },
+      "missing_lines": [
+        31,
+        48,
+        49,
+        50,
+        67,
+        68,
+        70,
+        71,
+        79,
+        80,
+        95,
+        96
+      ],
+      "excluded_lines": [],
+      "functions": {
+        "chek": {
+          "executed_lines": [],
+          "summary": {
+            "covered_lines": 0,
+            "num_statements": 1,
+            "percent_covered": 0.0,
+            "percent_covered_display": "0",
+            "missing_lines": 1,
+            "excluded_lines": 0
+          },
+          "missing_lines": [
+            31
+          ],
+          "excluded_lines": []
+        },
+        "list_tokens": {
+          "executed_lines": [],
+          "summary": {
+            "covered_lines": 0,
+            "num_statements": 3,
+            "percent_covered": 0.0,
+            "percent_covered_display": "0",
+            "missing_lines": 3,
+            "excluded_lines": 0
+          },
+          "missing_lines": [
+            48,
+            49,
+            50
+          ],
+          "excluded_lines": []
+        },
+        "delete_token": {
+          "executed_lines": [],
+          "summary": {
+            "covered_lines": 0,
+            "num_statements": 4,
+            "percent_covered": 0.0,
+            "percent_covered_display": "0",
+            "missing_lines": 4,
+            "excluded_lines": 0
+          },
+          "missing_lines": [
+            67,
+            68,
+            70,
+            71
+          ],
+          "excluded_lines": []
+        },
+        "create": {
+          "executed_lines": [],
+          "summary": {
+            "covered_lines": 0,
+            "num_statements": 2,
+            "percent_covered": 0.0,
+            "percent_covered_display": "0",
+            "missing_lines": 2,
+            "excluded_lines": 0
+          },
+          "missing_lines": [
+            79,
+            80
+          ],
+          "excluded_lines": []
+        },
+        "add": {
+          "executed_lines": [],
+          "summary": {
+            "covered_lines": 0,
+            "num_statements": 2,
+            "percent_covered": 0.0,
+            "percent_covered_display": "0",
+            "missing_lines": 2,
+            "excluded_lines": 0
+          },
+          "missing_lines": [
+            95,
+            96
+          ],
+          "excluded_lines": []
+        },
+        "": {
+          "executed_lines": [
+            1,
+            3,
+            5,
+            6,
+            7,
+            9,
+            11,
+            19,
+            20,
+            41,
+            44,
+            53,
+            56,
+            74,
+            75,
+            83,
+            84
+          ],
+          "summary": {
+            "covered_lines": 17,
+            "num_statements": 17,
+            "percent_covered": 100.0,
+            "percent_covered_display": "100",
+            "missing_lines": 0,
+            "excluded_lines": 0
+          },
+          "missing_lines": [],
+          "excluded_lines": []
+        }
+      },
+      "classes": {
+        "": {
+          "executed_lines": [
+            1,
+            3,
+            5,
+            6,
+            7,
+            9,
+            11,
+            19,
+            20,
+            41,
+            44,
+            53,
+            56,
+            74,
+            75,
+            83,
+            84
+          ],
+          "summary": {
+            "covered_lines": 17,
+            "num_statements": 29,
+            "percent_covered": 58.62068965517241,
+            "percent_covered_display": "59",
+            "missing_lines": 12,
+            "excluded_lines": 0
+          },
+          "missing_lines": [
+            31,
+            48,
+            49,
+            50,
+            67,
+            68,
+            70,
+            71,
+            79,
+            80,
+            95,
+            96
+          ],
+          "excluded_lines": []
+        }
+      }
+    },
+    "core\\__init__.py": {
+      "executed_lines": [
+        0
+      ],
+      "summary": {
+        "covered_lines": 0,
+        "num_statements": 0,
+        "percent_covered": 100.0,
+        "percent_covered_display": "100",
+        "missing_lines": 0,
+        "excluded_lines": 0
+      },
+      "missing_lines": [],
+      "excluded_lines": [],
+      "functions": {
+        "": {
+          "executed_lines": [],
+          "summary": {
+            "covered_lines": 0,
+            "num_statements": 0,
+            "percent_covered": 100.0,
+            "percent_covered_display": "100",
+            "missing_lines": 0,
+            "excluded_lines": 0
+          },
+          "missing_lines": [],
+          "excluded_lines": []
+        }
+      },
+      "classes": {
+        "": {
+          "executed_lines": [],
+          "summary": {
+            "covered_lines": 0,
+            "num_statements": 0,
+            "percent_covered": 100.0,
+            "percent_covered_display": "100",
+            "missing_lines": 0,
+            "excluded_lines": 0
+          },
+          "missing_lines": [],
+          "excluded_lines": []
+        }
+      }
+    },
+    "core\\config.py": {
+      "executed_lines": [
+        1,
+        2,
+        3,
+        5,
+        6,
+        9,
+        10,
+        25,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        37,
+        38
+      ],
+      "summary": {
+        "covered_lines": 16,
+        "num_statements": 16,
+        "percent_covered": 100.0,
+        "percent_covered_display": "100",
+        "missing_lines": 0,
+        "excluded_lines": 0
+      },
+      "missing_lines": [],
+      "excluded_lines": [],
+      "functions": {
+        "": {
+          "executed_lines": [
+            1,
+            2,
+            3,
+            5,
+            6,
+            9,
+            10,
+            25,
+            30,
+            31,
+            32,
+            33,
+            34,
+            35,
+            37,
+            38
+          ],
+          "summary": {
+            "covered_lines": 16,
+            "num_statements": 16,
+            "percent_covered": 100.0,
+            "percent_covered_display": "100",
+            "missing_lines": 0,
+            "excluded_lines": 0
+          },
+          "missing_lines": [],
+          "excluded_lines": []
+        }
+      },
+      "classes": {
+        "": {
+          "executed_lines": [
+            1,
+            2,
+            3,
+            5,
+            6,
+            9,
+            10,
+            25,
+            30,
+            31,
+            32,
+            33,
+            34,
+            35,
+            37,
+            38
+          ],
+          "summary": {
+            "covered_lines": 16,
+            "num_statements": 16,
+            "percent_covered": 100.0,
+            "percent_covered_display": "100",
+            "missing_lines": 0,
+            "excluded_lines": 0
+          },
+          "missing_lines": [],
+          "excluded_lines": []
+        }
+      }
+    },
+    "schemas\\__init__.py": {
+      "executed_lines": [
+        0
+      ],
+      "summary": {
+        "covered_lines": 0,
+        "num_statements": 0,
+        "percent_covered": 100.0,
+        "percent_covered_display": "100",
+        "missing_lines": 0,
+        "excluded_lines": 0
+      },
+      "missing_lines": [],
+      "excluded_lines": [],
+      "functions": {
+        "": {
+          "executed_lines": [],
+          "summary": {
+            "covered_lines": 0,
+            "num_statements": 0,
+            "percent_covered": 100.0,
+            "percent_covered_display": "100",
+            "missing_lines": 0,
+            "excluded_lines": 0
+          },
+          "missing_lines": [],
+          "excluded_lines": []
+        }
+      },
+      "classes": {
+        "": {
+          "executed_lines": [],
+          "summary": {
+            "covered_lines": 0,
+            "num_statements": 0,
+            "percent_covered": 100.0,
+            "percent_covered_display": "100",
+            "missing_lines": 0,
+            "excluded_lines": 0
+          },
+          "missing_lines": [],
+          "excluded_lines": []
+        }
+      }
+    },
+    "schemas\\short_url.py": {
+      "executed_lines": [
+        1,
+        3,
+        4,
+        6,
+        12,
+        13,
+        14,
+        17,
+        18,
+        20,
+        24,
+        27,
+        28,
+        34,
+        35,
+        37,
+        38,
+        41,
+        42,
+        44,
+        45,
+        48,
+        49,
+        53,
+        54,
+        55
+      ],
+      "summary": {
+        "covered_lines": 21,
+        "num_statements": 21,
+        "percent_covered": 100.0,
+        "percent_covered_display": "100",
+        "missing_lines": 0,
+        "excluded_lines": 0
+      },
+      "missing_lines": [],
+      "excluded_lines": [],
+      "functions": {
+        "": {
+          "executed_lines": [
+            1,
+            3,
+            4,
+            6,
+            12,
+            13,
+            14,
+            17,
+            18,
+            20,
+            24,
+            27,
+            28,
+            34,
+            35,
+            37,
+            38,
+            41,
+            42,
+            44,
+            45,
+            48,
+            49,
+            53,
+            54,
+            55
+          ],
+          "summary": {
+            "covered_lines": 21,
+            "num_statements": 21,
+            "percent_covered": 100.0,
+            "percent_covered_display": "100",
+            "missing_lines": 0,
+            "excluded_lines": 0
+          },
+          "missing_lines": [],
+          "excluded_lines": []
+        }
+      },
+      "classes": {
+        "ShortUrlBase": {
+          "executed_lines": [],
+          "summary": {
+            "covered_lines": 0,
+            "num_statements": 0,
+            "percent_covered": 100.0,
+            "percent_covered_display": "100",
+            "missing_lines": 0,
+            "excluded_lines": 0
+          },
+          "missing_lines": [],
+          "excluded_lines": []
+        },
+        "ShortUrlCreate": {
+          "executed_lines": [],
+          "summary": {
+            "covered_lines": 0,
+            "num_statements": 0,
+            "percent_covered": 100.0,
+            "percent_covered_display": "100",
+            "missing_lines": 0,
+            "excluded_lines": 0
+          },
+          "missing_lines": [],
+          "excluded_lines": []
+        },
+        "ShortUrlUpdate": {
+          "executed_lines": [],
+          "summary": {
+            "covered_lines": 0,
+            "num_statements": 0,
+            "percent_covered": 100.0,
+            "percent_covered_display": "100",
+            "missing_lines": 0,
+            "excluded_lines": 0
+          },
+          "missing_lines": [],
+          "excluded_lines": []
+        },
+        "ShortUrlPartialUpdate": {
+          "executed_lines": [],
+          "summary": {
+            "covered_lines": 0,
+            "num_statements": 0,
+            "percent_covered": 100.0,
+            "percent_covered_display": "100",
+            "missing_lines": 0,
+            "excluded_lines": 0
+          },
+          "missing_lines": [],
+          "excluded_lines": []
+        },
+        "ShortUrlRead": {
+          "executed_lines": [],
+          "summary": {
+            "covered_lines": 0,
+            "num_statements": 0,
+            "percent_covered": 100.0,
+            "percent_covered_display": "100",
+            "missing_lines": 0,
+            "excluded_lines": 0
+          },
+          "missing_lines": [],
+          "excluded_lines": []
+        },
+        "ShortUrl": {
+          "executed_lines": [],
+          "summary": {
+            "covered_lines": 0,
+            "num_statements": 0,
+            "percent_covered": 100.0,
+            "percent_covered_display": "100",
+            "missing_lines": 0,
+            "excluded_lines": 0
+          },
+          "missing_lines": [],
+          "excluded_lines": []
+        },
+        "": {
+          "executed_lines": [
+            1,
+            3,
+            4,
+            6,
+            12,
+            13,
+            14,
+            17,
+            18,
+            20,
+            24,
+            27,
+            28,
+            34,
+            35,
+            37,
+            38,
+            41,
+            42,
+            44,
+            45,
+            48,
+            49,
+            53,
+            54,
+            55
+          ],
+          "summary": {
+            "covered_lines": 21,
+            "num_statements": 21,
+            "percent_covered": 100.0,
+            "percent_covered_display": "100",
+            "missing_lines": 0,
+            "excluded_lines": 0
+          },
+          "missing_lines": [],
+          "excluded_lines": []
+        }
+      }
+    },
+    "testing\\__init__.py": {
+      "executed_lines": [
+        0
+      ],
+      "summary": {
+        "covered_lines": 0,
+        "num_statements": 0,
+        "percent_covered": 100.0,
+        "percent_covered_display": "100",
+        "missing_lines": 0,
+        "excluded_lines": 0
+      },
+      "missing_lines": [],
+      "excluded_lines": [],
+      "functions": {
+        "": {
+          "executed_lines": [],
+          "summary": {
+            "covered_lines": 0,
+            "num_statements": 0,
+            "percent_covered": 100.0,
+            "percent_covered_display": "100",
+            "missing_lines": 0,
+            "excluded_lines": 0
+          },
+          "missing_lines": [],
+          "excluded_lines": []
+        }
+      },
+      "classes": {
+        "": {
+          "executed_lines": [],
+          "summary": {
+            "covered_lines": 0,
+            "num_statements": 0,
+            "percent_covered": 100.0,
+            "percent_covered_display": "100",
+            "missing_lines": 0,
+            "excluded_lines": 0
+          },
+          "missing_lines": [],
+          "excluded_lines": []
+        }
+      }
+    },
+    "testing\\test_api\\__init__.py": {
+      "executed_lines": [
+        0
+      ],
+      "summary": {
+        "covered_lines": 0,
+        "num_statements": 0,
+        "percent_covered": 100.0,
+        "percent_covered_display": "100",
+        "missing_lines": 0,
+        "excluded_lines": 0
+      },
+      "missing_lines": [],
+      "excluded_lines": [],
+      "functions": {
+        "": {
+          "executed_lines": [],
+          "summary": {
+            "covered_lines": 0,
+            "num_statements": 0,
+            "percent_covered": 100.0,
+            "percent_covered_display": "100",
+            "missing_lines": 0,
+            "excluded_lines": 0
+          },
+          "missing_lines": [],
+          "excluded_lines": []
+        }
+      },
+      "classes": {
+        "": {
+          "executed_lines": [],
+          "summary": {
+            "covered_lines": 0,
+            "num_statements": 0,
+            "percent_covered": 100.0,
+            "percent_covered_display": "100",
+            "missing_lines": 0,
+            "excluded_lines": 0
+          },
+          "missing_lines": [],
+          "excluded_lines": []
+        }
+      }
+    },
+    "testing\\test_api\\test_api_v1\\__init__.py": {
+      "executed_lines": [
+        0
+      ],
+      "summary": {
+        "covered_lines": 0,
+        "num_statements": 0,
+        "percent_covered": 100.0,
+        "percent_covered_display": "100",
+        "missing_lines": 0,
+        "excluded_lines": 0
+      },
+      "missing_lines": [],
+      "excluded_lines": [],
+      "functions": {
+        "": {
+          "executed_lines": [],
+          "summary": {
+            "covered_lines": 0,
+            "num_statements": 0,
+            "percent_covered": 100.0,
+            "percent_covered_display": "100",
+            "missing_lines": 0,
+            "excluded_lines": 0
+          },
+          "missing_lines": [],
+          "excluded_lines": []
+        }
+      },
+      "classes": {
+        "": {
+          "executed_lines": [],
+          "summary": {
+            "covered_lines": 0,
+            "num_statements": 0,
+            "percent_covered": 100.0,
+            "percent_covered_display": "100",
+            "missing_lines": 0,
+            "excluded_lines": 0
+          },
+          "missing_lines": [],
+          "excluded_lines": []
+        }
+      }
+    },
+    "testing\\test_api\\test_api_v1\\test_auth\\__init__.py": {
+      "executed_lines": [
+        0
+      ],
+      "summary": {
+        "covered_lines": 0,
+        "num_statements": 0,
+        "percent_covered": 100.0,
+        "percent_covered_display": "100",
+        "missing_lines": 0,
+        "excluded_lines": 0
+      },
+      "missing_lines": [],
+      "excluded_lines": [],
+      "functions": {
+        "": {
+          "executed_lines": [],
+          "summary": {
+            "covered_lines": 0,
+            "num_statements": 0,
+            "percent_covered": 100.0,
+            "percent_covered_display": "100",
+            "missing_lines": 0,
+            "excluded_lines": 0
+          },
+          "missing_lines": [],
+          "excluded_lines": []
+        }
+      },
+      "classes": {
+        "": {
+          "executed_lines": [],
+          "summary": {
+            "covered_lines": 0,
+            "num_statements": 0,
+            "percent_covered": 100.0,
+            "percent_covered_display": "100",
+            "missing_lines": 0,
+            "excluded_lines": 0
+          },
+          "missing_lines": [],
+          "excluded_lines": []
+        }
+      }
+    },
+    "testing\\test_api\\test_api_v1\\test_auth\\test_services\\__init__.py": {
+      "executed_lines": [
+        0
+      ],
+      "summary": {
+        "covered_lines": 0,
+        "num_statements": 0,
+        "percent_covered": 100.0,
+        "percent_covered_display": "100",
+        "missing_lines": 0,
+        "excluded_lines": 0
+      },
+      "missing_lines": [],
+      "excluded_lines": [],
+      "functions": {
+        "": {
+          "executed_lines": [],
+          "summary": {
+            "covered_lines": 0,
+            "num_statements": 0,
+            "percent_covered": 100.0,
+            "percent_covered_display": "100",
+            "missing_lines": 0,
+            "excluded_lines": 0
+          },
+          "missing_lines": [],
+          "excluded_lines": []
+        }
+      },
+      "classes": {
+        "": {
+          "executed_lines": [],
+          "summary": {
+            "covered_lines": 0,
+            "num_statements": 0,
+            "percent_covered": 100.0,
+            "percent_covered_display": "100",
+            "missing_lines": 0,
+            "excluded_lines": 0
+          },
+          "missing_lines": [],
+          "excluded_lines": []
+        }
+      }
+    },
+    "testing\\test_api\\test_api_v1\\test_auth\\test_services\\test_redis_token_helper.py": {
+      "executed_lines": [
+        1,
+        2,
+        4,
+        7,
+        8
+      ],
+      "summary": {
+        "covered_lines": 5,
+        "num_statements": 9,
+        "percent_covered": 55.55555555555556,
+        "percent_covered_display": "56",
+        "missing_lines": 4,
+        "excluded_lines": 0
+      },
+      "missing_lines": [
+        13,
+        14,
+        15,
+        21
+      ],
+      "excluded_lines": [],
+      "functions": {
+        "RedisTokenHelperTestCase.test_generate_and_save_token": {
+          "executed_lines": [],
+          "summary": {
+            "covered_lines": 0,
+            "num_statements": 2,
+            "percent_covered": 0.0,
+            "percent_covered_display": "0",
+            "missing_lines": 2,
+            "excluded_lines": 0
+          },
+          "missing_lines": [
+            15,
+            21
+          ],
+          "excluded_lines": []
+        },
+        "": {
+          "executed_lines": [
+            1,
+            2,
+            4,
+            7,
+            8
+          ],
+          "summary": {
+            "covered_lines": 5,
+            "num_statements": 7,
+            "percent_covered": 71.42857142857143,
+            "percent_covered_display": "71",
+            "missing_lines": 2,
+            "excluded_lines": 0
+          },
+          "missing_lines": [
+            13,
+            14
+          ],
+          "excluded_lines": []
+        }
+      },
+      "classes": {
+        "RedisTokenHelperTestCase": {
+          "executed_lines": [],
+          "summary": {
+            "covered_lines": 0,
+            "num_statements": 2,
+            "percent_covered": 0.0,
+            "percent_covered_display": "0",
+            "missing_lines": 2,
+            "excluded_lines": 0
+          },
+          "missing_lines": [
+            15,
+            21
+          ],
+          "excluded_lines": []
+        },
+        "": {
+          "executed_lines": [
+            1,
+            2,
+            4,
+            7,
+            8
+          ],
+          "summary": {
+            "covered_lines": 5,
+            "num_statements": 7,
+            "percent_covered": 71.42857142857143,
+            "percent_covered_display": "71",
+            "missing_lines": 2,
+            "excluded_lines": 0
+          },
+          "missing_lines": [
+            13,
+            14
+          ],
+          "excluded_lines": []
+        }
+      }
+    },
+    "testing\\test_api\\test_api_v1\\test_short_urls\\__init__.py": {
+      "executed_lines": [
+        0
+      ],
+      "summary": {
+        "covered_lines": 0,
+        "num_statements": 0,
+        "percent_covered": 100.0,
+        "percent_covered_display": "100",
+        "missing_lines": 0,
+        "excluded_lines": 0
+      },
+      "missing_lines": [],
+      "excluded_lines": [],
+      "functions": {
+        "": {
+          "executed_lines": [],
+          "summary": {
+            "covered_lines": 0,
+            "num_statements": 0,
+            "percent_covered": 100.0,
+            "percent_covered_display": "100",
+            "missing_lines": 0,
+            "excluded_lines": 0
+          },
+          "missing_lines": [],
+          "excluded_lines": []
+        }
+      },
+      "classes": {
+        "": {
+          "executed_lines": [],
+          "summary": {
+            "covered_lines": 0,
+            "num_statements": 0,
+            "percent_covered": 100.0,
+            "percent_covered_display": "100",
+            "missing_lines": 0,
+            "excluded_lines": 0
+          },
+          "missing_lines": [],
+          "excluded_lines": []
+        }
+      }
+    },
+    "testing\\test_api\\test_api_v1\\test_short_urls\\test_crud.py": {
+      "executed_lines": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        7,
+        8,
+        15,
+        16
+      ],
+      "summary": {
+        "covered_lines": 9,
+        "num_statements": 53,
+        "percent_covered": 16.9811320754717,
+        "percent_covered_display": "17",
+        "missing_lines": 44,
+        "excluded_lines": 0
+      },
+      "missing_lines": [
+        21,
+        22,
+        32,
+        35,
+        36,
+        37,
+        39,
+        40,
+        42,
+        43,
+        44,
+        47,
+        48,
+        49,
+        53,
+        57,
+        62,
+        63,
+        66,
+        67,
+        71,
+        75,
+        81,
+        82,
+        83,
+        85,
+        86,
+        87,
+        89,
+        90,
+        91,
+        92,
+        94,
+        95,
+        96,
+        97,
+        98,
+        99,
+        100,
+        102,
+        103,
+        104,
+        108,
+        109
+      ],
+      "excluded_lines": [],
+      "functions": {
+        "create_short_url": {
+          "executed_lines": [],
+          "summary": {
+            "covered_lines": 0,
+            "num_statements": 2,
+            "percent_covered": 0.0,
+            "percent_covered_display": "0",
+            "missing_lines": 2,
+            "excluded_lines": 0
+          },
+          "missing_lines": [
+            22,
+            32
+          ],
+          "excluded_lines": []
+        },
+        "ShortUrlStorageUpdateTestCase.setUp": {
+          "executed_lines": [],
+          "summary": {
+            "covered_lines": 0,
+            "num_statements": 1,
+            "percent_covered": 0.0,
+            "percent_covered_display": "0",
+            "missing_lines": 1,
+            "excluded_lines": 0
+          },
+          "missing_lines": [
+            37
+          ],
+          "excluded_lines": []
+        },
+        "ShortUrlStorageUpdateTestCase.tearDown": {
+          "executed_lines": [],
+          "summary": {
+            "covered_lines": 0,
+            "num_statements": 1,
+            "percent_covered": 0.0,
+            "percent_covered_display": "0",
+            "missing_lines": 1,
+            "excluded_lines": 0
+          },
+          "missing_lines": [
+            40
+          ],
+          "excluded_lines": []
+        },
+        "ShortUrlStorageUpdateTestCase.test_update": {
+          "executed_lines": [],
+          "summary": {
+            "covered_lines": 0,
+            "num_statements": 7,
+            "percent_covered": 0.0,
+            "percent_covered_display": "0",
+            "missing_lines": 7,
+            "excluded_lines": 0
+          },
+          "missing_lines": [
+            43,
+            44,
+            47,
+            48,
+            49,
+            53,
+            57
+          ],
+          "excluded_lines": []
+        },
+        "ShortUrlStorageUpdateTestCase.test_update_partial": {
+          "executed_lines": [],
+          "summary": {
+            "covered_lines": 0,
+            "num_statements": 5,
+            "percent_covered": 0.0,
+            "percent_covered_display": "0",
+            "missing_lines": 5,
+            "excluded_lines": 0
+          },
+          "missing_lines": [
+            63,
+            66,
+            67,
+            71,
+            75
+          ],
+          "excluded_lines": []
+        },
+        "ShortUrlsStorageGetShortUrlsTestCase.setUpClass": {
+          "executed_lines": [],
+          "summary": {
+            "covered_lines": 0,
+            "num_statements": 1,
+            "percent_covered": 0.0,
+            "percent_covered_display": "0",
+            "missing_lines": 1,
+            "excluded_lines": 0
+          },
+          "missing_lines": [
+            87
+          ],
+          "excluded_lines": []
+        },
+        "ShortUrlsStorageGetShortUrlsTestCase.tearDownClass": {
+          "executed_lines": [],
+          "summary": {
+            "covered_lines": 0,
+            "num_statements": 2,
+            "percent_covered": 0.0,
+            "percent_covered_display": "0",
+            "missing_lines": 2,
+            "excluded_lines": 0
+          },
+          "missing_lines": [
+            91,
+            92
+          ],
+          "excluded_lines": []
+        },
+        "ShortUrlsStorageGetShortUrlsTestCase.test_get_list": {
+          "executed_lines": [],
+          "summary": {
+            "covered_lines": 0,
+            "num_statements": 6,
+            "percent_covered": 0.0,
+            "percent_covered_display": "0",
+            "missing_lines": 6,
+            "excluded_lines": 0
+          },
+          "missing_lines": [
+            95,
+            96,
+            97,
+            98,
+            99,
+            100
+          ],
+          "excluded_lines": []
+        },
+        "ShortUrlsStorageGetShortUrlsTestCase.test_get_by_slug": {
+          "executed_lines": [],
+          "summary": {
+            "covered_lines": 0,
+            "num_statements": 4,
+            "percent_covered": 0.0,
+            "percent_covered_display": "0",
+            "missing_lines": 4,
+            "excluded_lines": 0
+          },
+          "missing_lines": [
+            103,
+            104,
+            108,
+            109
+          ],
+          "excluded_lines": []
+        },
+        "": {
+          "executed_lines": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            7,
+            8,
+            15,
+            16
+          ],
+          "summary": {
+            "covered_lines": 9,
+            "num_statements": 24,
+            "percent_covered": 37.5,
+            "percent_covered_display": "38",
+            "missing_lines": 15,
+            "excluded_lines": 0
+          },
+          "missing_lines": [
+            21,
+            35,
+            36,
+            39,
+            42,
+            62,
+            81,
+            82,
+            83,
+            85,
+            86,
+            89,
+            90,
+            94,
+            102
+          ],
+          "excluded_lines": []
+        }
+      },
+      "classes": {
+        "ShortUrlStorageUpdateTestCase": {
+          "executed_lines": [],
+          "summary": {
+            "covered_lines": 0,
+            "num_statements": 14,
+            "percent_covered": 0.0,
+            "percent_covered_display": "0",
+            "missing_lines": 14,
+            "excluded_lines": 0
+          },
+          "missing_lines": [
+            37,
+            40,
+            43,
+            44,
+            47,
+            48,
+            49,
+            53,
+            57,
+            63,
+            66,
+            67,
+            71,
+            75
+          ],
+          "excluded_lines": []
+        },
+        "ShortUrlsStorageGetShortUrlsTestCase": {
+          "executed_lines": [],
+          "summary": {
+            "covered_lines": 0,
+            "num_statements": 13,
+            "percent_covered": 0.0,
+            "percent_covered_display": "0",
+            "missing_lines": 13,
+            "excluded_lines": 0
+          },
+          "missing_lines": [
+            87,
+            91,
+            92,
+            95,
+            96,
+            97,
+            98,
+            99,
+            100,
+            103,
+            104,
+            108,
+            109
+          ],
+          "excluded_lines": []
+        },
+        "": {
+          "executed_lines": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            7,
+            8,
+            15,
+            16
+          ],
+          "summary": {
+            "covered_lines": 9,
+            "num_statements": 26,
+            "percent_covered": 34.61538461538461,
+            "percent_covered_display": "35",
+            "missing_lines": 17,
+            "excluded_lines": 0
+          },
+          "missing_lines": [
+            21,
+            22,
+            32,
+            35,
+            36,
+            39,
+            42,
+            62,
+            81,
+            82,
+            83,
+            85,
+            86,
+            89,
+            90,
+            94,
+            102
+          ],
+          "excluded_lines": []
+        }
+      }
+    },
+    "testing\\test_schemas\\__init__.py": {
+      "executed_lines": [
+        0
+      ],
+      "summary": {
+        "covered_lines": 0,
+        "num_statements": 0,
+        "percent_covered": 100.0,
+        "percent_covered_display": "100",
+        "missing_lines": 0,
+        "excluded_lines": 0
+      },
+      "missing_lines": [],
+      "excluded_lines": [],
+      "functions": {
+        "": {
+          "executed_lines": [],
+          "summary": {
+            "covered_lines": 0,
+            "num_statements": 0,
+            "percent_covered": 100.0,
+            "percent_covered_display": "100",
+            "missing_lines": 0,
+            "excluded_lines": 0
+          },
+          "missing_lines": [],
+          "excluded_lines": []
+        }
+      },
+      "classes": {
+        "": {
+          "executed_lines": [],
+          "summary": {
+            "covered_lines": 0,
+            "num_statements": 0,
+            "percent_covered": 100.0,
+            "percent_covered_display": "100",
+            "missing_lines": 0,
+            "excluded_lines": 0
+          },
+          "missing_lines": [],
+          "excluded_lines": []
+        }
+      }
+    },
+    "testing\\test_schemas\\test_short_url.py": {
+      "executed_lines": [
+        1,
+        3,
+        4,
+        6,
+        14,
+        15,
+        16,
+        21,
+        24,
+        28,
+        32,
+        37,
+        38,
+        42,
+        46,
+        50,
+        55,
+        56,
+        60,
+        64,
+        68,
+        73,
+        74,
+        83,
+        84,
+        85,
+        90,
+        95,
+        96,
+        97,
+        102,
+        103,
+        104,
+        105,
+        106,
+        107,
+        109,
+        110,
+        114
+      ],
+      "summary": {
+        "covered_lines": 39,
+        "num_statements": 39,
+        "percent_covered": 100.0,
+        "percent_covered_display": "100",
+        "missing_lines": 0,
+        "excluded_lines": 0
+      },
+      "missing_lines": [],
+      "excluded_lines": [],
+      "functions": {
+        "ShortUrlCreateTestCase.test_short_url_can_be_created_from_create_schemas": {
+          "executed_lines": [
+            16,
+            21,
+            24,
+            28,
+            32
+          ],
+          "summary": {
+            "covered_lines": 5,
+            "num_statements": 5,
+            "percent_covered": 100.0,
+            "percent_covered_display": "100",
+            "missing_lines": 0,
+            "excluded_lines": 0
+          },
+          "missing_lines": [],
+          "excluded_lines": []
+        },
+        "ShortUrlCreateTestCase.test_short_url_can_be_update_from_schemas": {
+          "executed_lines": [
+            38,
+            42,
+            46,
+            50
+          ],
+          "summary": {
+            "covered_lines": 4,
+            "num_statements": 4,
+            "percent_covered": 100.0,
+            "percent_covered_display": "100",
+            "missing_lines": 0,
+            "excluded_lines": 0
+          },
+          "missing_lines": [],
+          "excluded_lines": []
+        },
+        "ShortUrlCreateTestCase.test_short_url_can_be_update_partial_from_schemas": {
+          "executed_lines": [
+            56,
+            60,
+            64,
+            68
+          ],
+          "summary": {
+            "covered_lines": 4,
+            "num_statements": 4,
+            "percent_covered": 100.0,
+            "percent_covered_display": "100",
+            "missing_lines": 0,
+            "excluded_lines": 0
+          },
+          "missing_lines": [],
+          "excluded_lines": []
+        },
+        "ShortUrlCreateTestCase.test_short_url_create_accepts_different_urls": {
+          "executed_lines": [
+            74,
+            83,
+            84,
+            85,
+            90
+          ],
+          "summary": {
+            "covered_lines": 5,
+            "num_statements": 5,
+            "percent_covered": 100.0,
+            "percent_covered_display": "100",
+            "missing_lines": 0,
+            "excluded_lines": 0
+          },
+          "missing_lines": [],
+          "excluded_lines": []
+        },
+        "ShortUrlCreateTestCase.test_short_url_slug_to_short": {
+          "executed_lines": [
+            96,
+            97,
+            102,
+            103,
+            104,
+            105,
+            106,
+            107
+          ],
+          "summary": {
+            "covered_lines": 8,
+            "num_statements": 8,
+            "percent_covered": 100.0,
+            "percent_covered_display": "100",
+            "missing_lines": 0,
+            "excluded_lines": 0
+          },
+          "missing_lines": [],
+          "excluded_lines": []
+        },
+        "ShortUrlCreateTestCase.test_short_url_slug_to_regex": {
+          "executed_lines": [
+            110,
+            114
+          ],
+          "summary": {
+            "covered_lines": 2,
+            "num_statements": 2,
+            "percent_covered": 100.0,
+            "percent_covered_display": "100",
+            "missing_lines": 0,
+            "excluded_lines": 0
+          },
+          "missing_lines": [],
+          "excluded_lines": []
+        },
+        "": {
+          "executed_lines": [
+            1,
+            3,
+            4,
+            6,
+            14,
+            15,
+            37,
+            55,
+            73,
+            95,
+            109
+          ],
+          "summary": {
+            "covered_lines": 11,
+            "num_statements": 11,
+            "percent_covered": 100.0,
+            "percent_covered_display": "100",
+            "missing_lines": 0,
+            "excluded_lines": 0
+          },
+          "missing_lines": [],
+          "excluded_lines": []
+        }
+      },
+      "classes": {
+        "ShortUrlCreateTestCase": {
+          "executed_lines": [
+            16,
+            21,
+            24,
+            28,
+            32,
+            38,
+            42,
+            46,
+            50,
+            56,
+            60,
+            64,
+            68,
+            74,
+            83,
+            84,
+            85,
+            90,
+            96,
+            97,
+            102,
+            103,
+            104,
+            105,
+            106,
+            107,
+            110,
+            114
+          ],
+          "summary": {
+            "covered_lines": 28,
+            "num_statements": 28,
+            "percent_covered": 100.0,
+            "percent_covered_display": "100",
+            "missing_lines": 0,
+            "excluded_lines": 0
+          },
+          "missing_lines": [],
+          "excluded_lines": []
+        },
+        "": {
+          "executed_lines": [
+            1,
+            3,
+            4,
+            6,
+            14,
+            15,
+            37,
+            55,
+            73,
+            95,
+            109
+          ],
+          "summary": {
+            "covered_lines": 11,
+            "num_statements": 11,
+            "percent_covered": 100.0,
+            "percent_covered_display": "100",
+            "missing_lines": 0,
+            "excluded_lines": 0
+          },
+          "missing_lines": [],
+          "excluded_lines": []
+        }
+      }
+    }
+  },
+  "totals": {
+    "covered_lines": 246,
+    "num_statements": 374,
+    "percent_covered": 65.77540106951872,
+    "percent_covered_display": "66",
+    "missing_lines": 128,
+    "excluded_lines": 0
+  }
+}
