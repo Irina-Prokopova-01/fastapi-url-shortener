@@ -4,6 +4,8 @@ from typing import ClassVar
 from unittest import TestCase
 from os import getenv
 
+import pytest
+
 from api.api_v1.short_url.crud import storage
 from schemas.short_url import (
     ShortUrl,
@@ -13,8 +15,8 @@ from schemas.short_url import (
 )
 
 if getenv("TESTING") != "1":
-    raise OSError(  # noqa: TRY003
-        "Environment is not ready for testing",  # noqa: EM101
+    pytest.exit(  # noqa: TRY003
+        "Environment is not ready for pytest testing",  # noqa: EM101
     )
 
 
@@ -34,6 +36,10 @@ def create_short_url() -> ShortUrl:
 
 class ShortUrlStorageUpdateTestCase(TestCase):
     def setUp(self) -> None:
+        if getenv("TESTING") != "1":
+            raise OSError(  # noqa: TRY003
+                "Environment is not ready for redis testing",  # noqa: EM101
+            )
         self.short_url = create_short_url()
 
     def tearDown(self) -> None:
@@ -84,6 +90,10 @@ class ShortUrlsStorageGetShortUrlsTestCase(TestCase):
 
     @classmethod
     def setUpClass(cls) -> None:
+        if getenv("TESTING") != "1":
+            raise OSError(  # noqa: TRY003
+                "Environment is not ready for testing",  # noqa: EM101
+            )
         cls.short_urls = [create_short_url() for _ in range(cls.SHORT_URLS_COUNT)]
 
     @classmethod
