@@ -7,6 +7,7 @@ from fastapi import (
 )
 
 from api import router as api_router
+from api.main_views import router as main_router
 from api.redirect_views import router as redirect_views
 from app_lifespan import lifespan
 from core import config
@@ -19,20 +20,7 @@ app = FastAPI(
 
 app.include_router(redirect_views)
 app.include_router(api_router)
-
-
-@app.get("/")
-def read_root(
-    request: Request,
-) -> dict[str, str]:
-    docs_url = request.url.replace(
-        path="/docs",
-        query="",
-    )
-    return {
-        "massage": "Hello {name}",
-        "docs": str(docs_url),
-    }
+app.include_router(main_router)
 
 
 if __name__ == "__main__":
