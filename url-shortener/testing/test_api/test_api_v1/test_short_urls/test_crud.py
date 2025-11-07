@@ -14,11 +14,6 @@ from schemas.short_url import (
     ShortUrlPartialUpdate,
 )
 
-if getenv("TESTING") != "1":
-    pytest.exit(  # noqa: TRY003
-        "Environment is not ready for pytest testing",  # noqa: EM101
-    )
-
 
 def create_short_url() -> ShortUrl:
     short_url_in = ShortUrlCreate(
