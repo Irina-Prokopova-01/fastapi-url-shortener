@@ -1,5 +1,4 @@
-from unittest import expectedFailure
-
+import pytest
 from fastapi import status
 from starlette.testclient import TestClient
 from main import app
@@ -8,8 +7,26 @@ client = TestClient(app)
 
 
 def test_root_view() -> None:
-    # TODO: fake data
-    name = "John"
+    response = client.get("/")
+    assert response.status_code == status.HTTP_200_OK, response.text
+    response_data = response.json()
+    expected_message = f"Hello World"
+    assert response_data["message"] == expected_message, response_data
+
+
+@pytest.mark.parametrize(
+    "name",
+    [
+        # TODO: fake data
+        "Irina",
+        "Andrey",
+        "",
+        "Dmitry Prokopov" "!@#$%%^^",
+    ],
+)
+def test_root_view_custom_name(
+    name,
+) -> None:
     query = {"name": name}
     response = client.get("/", params=query)
     assert response.status_code == status.HTTP_200_OK, response.text
