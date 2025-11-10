@@ -1,16 +1,13 @@
 import pytest
 from fastapi import status
-from starlette.testclient import TestClient
-from main import app
-
-client = TestClient(app)
+from fastapi.testclient import TestClient
 
 
-def test_root_view() -> None:
+def test_root_view(client: TestClient) -> None:
     response = client.get("/")
     assert response.status_code == status.HTTP_200_OK, response.text
     response_data = response.json()
-    expected_message = f"Hello World"
+    expected_message = "Hello World"
     assert response_data["message"] == expected_message, response_data
 
 
@@ -21,11 +18,12 @@ def test_root_view() -> None:
         "Irina",
         "Andrey",
         "",
-        "Dmitry Prokopov" "!@#$%%^^",
+        "Dmitry Prokopov!@#$%%^^",
     ],
 )
 def test_root_view_custom_name(
     name: str,
+    client: TestClient,
 ) -> None:
     query = {"name": name}
     response = client.get("/", params=query)
