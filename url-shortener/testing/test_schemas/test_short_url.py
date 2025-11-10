@@ -12,7 +12,7 @@ from schemas.short_url import (
 
 
 class ShortUrlCreateTestCase(TestCase):
-    def test_short_url_can_be_created_from_create_schemas(self):
+    def test_short_url_can_be_created_from_create_schemas(self) -> None:
         short_url_in = ShortUrlCreate(
             description="some_description",
             slug="some_slug",
@@ -34,7 +34,7 @@ class ShortUrlCreateTestCase(TestCase):
             short_url_in.description,
         )
 
-    def test_short_url_can_be_update_from_schemas(self):
+    def test_short_url_can_be_update_from_schemas(self) -> None:
         short_url_in = ShortUrlUpdate(
             description="some_description",
             target_url="https://example.com",
@@ -52,7 +52,7 @@ class ShortUrlCreateTestCase(TestCase):
             short_url_in.description,
         )
 
-    def test_short_url_can_be_update_partial_from_schemas(self):
+    def test_short_url_can_be_update_partial_from_schemas(self) -> None:
         short_url_in = ShortUrlPartialUpdate(
             description="some_description",
             target_url="https://example.com",

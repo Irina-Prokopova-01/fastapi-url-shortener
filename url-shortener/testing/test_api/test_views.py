@@ -25,7 +25,7 @@ def test_root_view() -> None:
     ],
 )
 def test_root_view_custom_name(
-    name,
+    name: str,
 ) -> None:
     query = {"name": name}
     response = client.get("/", params=query)
