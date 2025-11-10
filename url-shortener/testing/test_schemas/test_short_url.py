@@ -1,7 +1,6 @@
 from unittest import TestCase
 
 from pydantic import ValidationError
-from typing_extensions import Annotated
 
 from schemas.short_url import (
     ShortUrl,
@@ -99,9 +98,6 @@ class ShortUrlCreateTestCase(TestCase):
                 target_url="https://example.com",
                 description="some_description",
             )
-        print(exc_info.exception)
-        print(exc_info.exception.json())
-        print(exc_info.exception.errors())
         error_details = exc_info.exception.errors()[0]
         expected_type = "string_too_short"
         self.assertEqual(expected_type, error_details["type"])

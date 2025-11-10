@@ -86,7 +86,6 @@ class ShortUrlsStorage(BaseModel):
         if not self.exists(short_url_in.slug):
             return self.create(short_url_in)
 
-        msg = f"Short url {short_url_in.slug} already exists."
         raise ShortUrlAlreadyExistsError(short_url_in.slug)
 
     def delete_by_slug(self, slug: str) -> None:

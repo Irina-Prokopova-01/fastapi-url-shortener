@@ -1,18 +1,18 @@
 import random
 import string
 from collections.abc import Generator
+from os import getenv
 from typing import ClassVar
 from unittest import TestCase
-from os import getenv
 
 import pytest
 
-from api.api_v1.short_url.crud import storage, ShortUrlAlreadyExistsError
+from api.api_v1.short_url.crud import ShortUrlAlreadyExistsError, storage
 from schemas.short_url import (
     ShortUrl,
-    ShortUrlUpdate,
     ShortUrlCreate,
     ShortUrlPartialUpdate,
+    ShortUrlUpdate,
 )
 
 
@@ -22,7 +22,7 @@ def create_short_url() -> ShortUrl:
             random.choices(
                 string.ascii_uppercase + string.digits,
                 k=8,
-            )
+            ),
         ),
         description="A short url",
         target_url="https://example.com",
@@ -31,7 +31,7 @@ def create_short_url() -> ShortUrl:
 
 
 @pytest.fixture()
-def short_url() -> Generator[ShortUrl, None, None]:
+def short_url() -> Generator[ShortUrl]:
     short_url = create_short_url()
     # print("Created short url %s", short_url.slug)
     yield short_url
@@ -52,7 +52,7 @@ class ShortUrlStorageUpdateTestCase(TestCase):
         storage.delete(self.short_url)
 
     def test_update(self) -> None:
-        short_url = create_short_url()
+        create_short_url()
         short_url_update = ShortUrlUpdate(
             **self.short_url.model_dump(),
         )
@@ -139,5 +139,5 @@ def test_create_or_raise_if_exists(short_url: ShortUrl) -> None:
     ) as exc_info:
         storage.create_or_raise_if_exists(short_url_create)
 
-    # assert exc_info.value.args[0] == short_url_create.slug
-    assert exc_info.value.args[0] == short_url_create.slug + "a"
+    assert exc_info.value.args[0] == short_url_create.slug
+    # assert exc_info.value.args[0] == short_url_create.slug + "a"

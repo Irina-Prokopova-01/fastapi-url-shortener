@@ -3,7 +3,6 @@ import logging
 import uvicorn
 from fastapi import (
     FastAPI,
-    Request,
 )
 
 from api import router as api_router

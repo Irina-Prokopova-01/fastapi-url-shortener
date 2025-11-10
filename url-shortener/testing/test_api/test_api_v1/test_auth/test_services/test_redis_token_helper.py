@@ -1,4 +1,3 @@
-from os import getenv
 from unittest import TestCase
 
 from api.api_v1.auth.services import redis_tokens
