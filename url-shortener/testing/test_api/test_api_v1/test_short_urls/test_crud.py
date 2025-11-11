@@ -1,6 +1,3 @@
-import random
-import string
-from collections.abc import Generator
 from os import getenv
 from typing import ClassVar
 from unittest import TestCase
@@ -8,36 +5,14 @@ from unittest import TestCase
 import pytest
 
 from api.api_v1.short_url.crud import ShortUrlAlreadyExistsError, storage
+
 from schemas.short_url import (
     ShortUrl,
     ShortUrlCreate,
     ShortUrlPartialUpdate,
     ShortUrlUpdate,
 )
-
-
-def create_short_url() -> ShortUrl:
-    short_url_in = ShortUrlCreate(
-        slug="".join(
-            random.choices(
-                string.ascii_uppercase + string.digits,
-                k=8,
-            ),
-        ),
-        description="A short url",
-        target_url="https://example.com",
-    )
-    return storage.create(short_url_in)
-
-
-@pytest.fixture()
-def short_url() -> Generator[ShortUrl]:
-    short_url = create_short_url()
-    # print("Created short url %s", short_url.slug)
-    yield short_url
-    storage.delete(short_url)
-    # 1/0
-    # print("Deleted short url %s", short_url.slug)
+from testing.conftest import create_short_url
 
 
 class ShortUrlStorageUpdateTestCase(TestCase):
