@@ -5,7 +5,7 @@ from fastapi import status
 from fastapi.testclient import TestClient
 
 from main import app
-from schemas.short_url import ShortUrlCreate
+from schemas.short_url import ShortUrlCreate, ShortUrl
 
 
 def test_create_short_url(auth_client: TestClient) -> None:
@@ -26,3 +26,17 @@ def test_create_short_url(auth_client: TestClient) -> None:
     response_data = response.json()
     received_values = ShortUrlCreate(**response_data)
     assert received_values == short_url_create, response_data
+
+
+def test_create_short_url_already_exists(
+    auth_client: TestClient,
+    short_url: ShortUrl,
+) -> None:
+    create_short_url = ShortUrlCreate(**short_url.model_dump())
+    data = create_short_url.model_dump(mode="json")
+    url = app.url_path_for("create_short_url")
+    response = auth_client.post(url=url, json=data)
+    response_data = response.json()
+    assert response.status_code == status.HTTP_409_CONFLICT, response.text
+    expected_error_detail = f"Short URL with slug={short_url.slug!r} already exists."
+    assert response_data["detail"] == expected_error_detail, response_data
