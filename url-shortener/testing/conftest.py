@@ -15,18 +15,29 @@ if getenv("TESTING") != "1":
     )
 
 
-def create_short_url() -> ShortUrl:
-    short_url_in = ShortUrlCreate(
+def build_short_url_create(
+    slug: str,
+    description: str = "A short url",
+) -> ShortUrlCreate:
+    return ShortUrlCreate(
+        slug=slug,
+        description=description,
+        target_url="https://example.com",
+    )
+
+
+def build_short_url_create_random_slug(
+    description: str = "A short url",
+) -> ShortUrlCreate:
+    return build_short_url_create(
         slug="".join(
             random.choices(
-                string.ascii_uppercase + string.digits,
+                string.ascii_letters,
                 k=8,
             ),
         ),
-        description="A short url",
-        target_url="https://example.com",
+        description=description,
     )
-    return storage.create(short_url_in)
 
 
 @pytest.fixture()
@@ -37,3 +48,23 @@ def short_url() -> Generator[ShortUrl]:
     storage.delete(short_url)
     # 1/0
     # print("Deleted short url %s", short_url.slug)
+
+
+def create_short_url(
+    slug: str,
+    description: str = "A short url",
+) -> ShortUrl:
+    short_url_in = build_short_url_create(
+        slug=slug,
+        description=description,
+    )
+    return storage.create(short_url_in)
+
+
+def create_short_url_random_slug(
+    description: str = "A short url",
+) -> ShortUrl:
+    short_url = build_short_url_create(
+        description=description,
+    )
+    return storage.create(short_url)
