@@ -12,22 +12,22 @@ from schemas.short_url import (
     ShortUrlPartialUpdate,
     ShortUrlUpdate,
 )
-from testing.conftest import create_short_url
+from testing.conftest import create_short_url_random_slug
 
 
 class ShortUrlStorageUpdateTestCase(TestCase):
     def setUp(self) -> None:
-        if getenv("TESTING") != "1":
-            raise OSError(  # noqa: TRY003
-                "Environment is not ready for redis testing",  # noqa: EM101
-            )
-        self.short_url = create_short_url()
+        # if getenv("TESTING") != "1":
+        #     raise OSError(  # noqa: TRY003
+        #         "Environment is not ready for redis testing",  # noqa: EM101
+        #     )
+        self.short_url = create_short_url_random_slug()
 
     def tearDown(self) -> None:
         storage.delete(self.short_url)
 
     def test_update(self) -> None:
-        create_short_url()
+        # create_short_url()
         short_url_update = ShortUrlUpdate(
             **self.short_url.model_dump(),
         )
@@ -75,7 +75,9 @@ class ShortUrlsStorageGetShortUrlsTestCase(TestCase):
             raise OSError(  # noqa: TRY003
                 "Environment is not ready for testing",  # noqa: EM101
             )
-        cls.short_urls = [create_short_url() for _ in range(cls.SHORT_URLS_COUNT)]
+        cls.short_urls = [
+            create_short_url_random_slug() for _ in range(cls.SHORT_URLS_COUNT)
+        ]
 
     @classmethod
     def tearDownClass(cls) -> None:
