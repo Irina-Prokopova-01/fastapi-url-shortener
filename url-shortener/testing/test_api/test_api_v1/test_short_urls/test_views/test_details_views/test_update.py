@@ -13,6 +13,7 @@ from testing.conftest import short_url, create_short_url, create_short_url_rando
 from testing.test_api.conftest import auth_client
 
 
+@pytest.mark.apitest
 class TestUpdate:
     @pytest.fixture
     def short_url(self, request: SubRequest) -> Generator[ShortUrl]:
