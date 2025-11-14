@@ -17,8 +17,19 @@ dev = [
     "mypy>=1.18.2",
     "pre-commit>=4.3.0",
     "pytest>=8.4.2",
+    "pytest-cov>=7.0.0",
     "ruff>=0.14.2",
 ]
+
+# pytest settings
+
+[tool.pytest.ini_options]
+minversion = "8.3"
+addopts = "-ra"
+#log_cli = true
+#log_cli_level = "INFO"
+#console_output_style = "count"
+console_output_style = "progress"
 
 # mypy settings
 [tool.mypy]
