@@ -10,10 +10,13 @@ from starlette.testclient import TestClient
 from api.api_v1.short_url.crud import storage
 from schemas.short_url import ShortUrlCreate, ShortUrl
 
-if getenv("TESTING") != "1":
-    pytest.exit(
-        "Environment is not ready for pytest testing",
-    )
+
+@pytest.fixture(scope="session", autouse=True)
+def check_testing_env() -> None:
+    if getenv("TESTING") != "1":
+        pytest.exit(
+            "Environment is not ready for pytest testing",
+        )
 
 
 def build_short_url_create(
@@ -46,7 +49,7 @@ def build_short_url_create_random_slug(
 
 @pytest.fixture()
 def short_url() -> Generator[ShortUrl]:
-    short_url = create_short_url()
+    short_url = create_short_url_random_slug()
     # print("Created short url %s", short_url.slug)
     yield short_url
     storage.delete(short_url)
