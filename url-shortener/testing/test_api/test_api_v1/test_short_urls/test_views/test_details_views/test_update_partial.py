@@ -11,6 +11,8 @@ from schemas.short_url import ShortUrl, DESCRIPTION_MAX_LENGTH
 from testing.conftest import create_short_url, create_short_url_random_slug
 from testing.test_api.conftest import auth_client
 
+pytestmark = pytest.mark.apitest
+
 
 class TestShortUrlUpdatePartial:
     @pytest.fixture()
