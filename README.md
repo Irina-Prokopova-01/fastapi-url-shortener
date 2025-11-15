@@ -5,6 +5,13 @@ Step:
 
 Right click "url-shortener"-> Mark Directory as -> Sources Root
 
+### Install dependencies
+
+Install all packages:
+```shell
+uv install
+```
+
 ### Configure pre-commit
 
 Install pre-commit hook:
