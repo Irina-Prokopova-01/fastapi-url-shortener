@@ -5,10 +5,9 @@ from os import getenv
 
 import pytest
 from pydantic import AnyHttpUrl
-from starlette.testclient import TestClient
 
 from api.api_v1.short_url.crud import storage
-from schemas.short_url import ShortUrlCreate, ShortUrl
+from schemas.short_url import ShortUrl, ShortUrlCreate
 
 
 @pytest.fixture(scope="session", autouse=True)

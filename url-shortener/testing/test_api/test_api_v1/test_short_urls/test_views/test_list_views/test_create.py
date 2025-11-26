@@ -9,7 +9,7 @@ from fastapi import status
 from fastapi.testclient import TestClient
 
 from main import app
-from schemas.short_url import ShortUrlCreate, ShortUrl
+from schemas.short_url import ShortUrl, ShortUrlCreate
 from testing.conftest import build_short_url_create_random_slug
 
 pytestmark = pytest.mark.apitest
@@ -61,7 +61,7 @@ class TestCreateInvalid:
         params=[
             pytest.param(("a", "string_too_short"), id="too-short"),
             pytest.param(("qwerty-foo-param", "string_too_long"), id="max-slug"),
-        ]
+        ],
     )
     def short_url_create_values(
         self,
@@ -69,10 +69,8 @@ class TestCreateInvalid:
     ) -> tuple[dict[str, Any], str]:
         build = build_short_url_create_random_slug()
         data = build.model_dump(mode="json")
-        print(data)
         slug, err_type = request.param
         data["slug"] = slug
-        print(data)
         return data, err_type
 
     def test_invalid_slug(
@@ -83,10 +81,8 @@ class TestCreateInvalid:
         url = app.url_path_for("create_short_url")
         create_data, expected_err_type = short_url_create_values
         response = auth_client.post(url=url, json=create_data)
-        print(response)
         assert (
             response.status_code == status.HTTP_422_UNPROCESSABLE_CONTENT
         ), response.text
         error_detail = response.json()["detail"][0]
-        print(error_detail["type"])
         assert error_detail["type"] == expected_err_type, error_detail

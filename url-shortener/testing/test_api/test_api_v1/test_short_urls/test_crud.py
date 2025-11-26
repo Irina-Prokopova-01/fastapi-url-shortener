@@ -5,7 +5,6 @@ from unittest import TestCase
 import pytest
 
 from api.api_v1.short_url.crud import ShortUrlAlreadyExistsError, storage
-
 from schemas.short_url import (
     ShortUrl,
     ShortUrlCreate,
@@ -18,8 +17,8 @@ from testing.conftest import create_short_url_random_slug
 class ShortUrlStorageUpdateTestCase(TestCase):
     def setUp(self) -> None:
         # if getenv("TESTING") != "1":
-        #     raise OSError(  # noqa: TRY003
-        #         "Environment is not ready for redis testing",  # noqa: EM101
+        #     raise OSError(
+        #         "Environment is not ready for redis testing",
         #     )
         self.short_url = create_short_url_random_slug()
 
