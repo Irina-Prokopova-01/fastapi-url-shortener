@@ -7,9 +7,8 @@ from starlette.testclient import TestClient
 
 from api.api_v1.short_url.crud import storage
 from main import app
-from schemas.short_url import ShortUrl, DESCRIPTION_MAX_LENGTH
-from testing.conftest import create_short_url, create_short_url_random_slug
-from testing.test_api.conftest import auth_client
+from schemas.short_url import DESCRIPTION_MAX_LENGTH, ShortUrl
+from testing.conftest import create_short_url_random_slug
 
 pytestmark = pytest.mark.apitest
 

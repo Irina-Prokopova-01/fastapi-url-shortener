@@ -1,5 +1,5 @@
 version = 1
-revision = 2
+revision = 3
 requires-python = ">=3.13"
 
 [[package]]
@@ -240,7 +240,7 @@ dev = [
 
 [package.metadata]
 requires-dist = [
-    { name = "fastapi", extras = ["standard"], specifier = ">=0.116.2" },
+    { name = "fastapi", extras = ["standard", "standart"], specifier = ">=0.116.2" },
     { name = "redis", extras = ["hiredis"], specifier = ">=6.4.0" },
     { name = "typer", specifier = ">=0.17.4" },
 ]

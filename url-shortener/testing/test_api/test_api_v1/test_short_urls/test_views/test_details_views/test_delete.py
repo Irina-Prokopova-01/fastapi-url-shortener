@@ -1,6 +1,3 @@
-import random
-import string
-from os import getenv
 
 import pytest
 from _pytest.fixtures import SubRequest
@@ -9,7 +6,7 @@ from starlette.testclient import TestClient
 
 from api.api_v1.short_url.crud import storage
 from main import app
-from schemas.short_url import ShortUrlCreate, ShortUrl
+from schemas.short_url import ShortUrl
 from testing.conftest import create_short_url
 
 
@@ -22,7 +19,6 @@ from testing.conftest import create_short_url
     ],
 )
 def short_url(request: SubRequest) -> ShortUrl:
-    print(type(request))
     return create_short_url(request.param)
 
 
