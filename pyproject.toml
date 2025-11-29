@@ -21,6 +21,9 @@ dev = [
     "ruff>=0.14.2",
 ]
 
+[tool.uv]
+required-version = "~= 0.9.12"
+
 # pytest settings
 
 [tool.pytest.ini_options]
