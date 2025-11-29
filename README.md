@@ -1,4 +1,4 @@
-#FastAPI URL Shortener
+#FastAPI URL Shortener proj
 ## Develop
 
 Check Github Actions after any push.
