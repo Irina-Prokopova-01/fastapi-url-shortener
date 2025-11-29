@@ -1,6 +1,8 @@
 #FastAPI URL Shortener
 ## Develop
 
+Check Github Actions after any push.
+
 Step:
 
 Right click "url-shortener"-> Mark Directory as -> Sources Root
