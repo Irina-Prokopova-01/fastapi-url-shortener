@@ -3,7 +3,7 @@
 
 Check Github Actions after any push.
 
-Steps:
+Step:
 
 Right click "url-shortener"-> Mark Directory as -> Sources Root
 
