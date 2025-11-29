@@ -3,7 +3,7 @@ name: Python checks 🐍
 on:
   push:
     branches:
-      - master
+      - main
 
 jobs:
   lint:
