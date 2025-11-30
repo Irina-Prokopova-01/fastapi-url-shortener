@@ -3,10 +3,10 @@ name: Python checks 🐍
 on:
   push:
     branches:
-      - master
+      - main
   pull_request:
     branches:
-      - master
+      - main
     paths:
       - ".github/workflows/**"
       - "url-shortener/**"
