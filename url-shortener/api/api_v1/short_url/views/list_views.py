@@ -4,7 +4,6 @@ from fastapi import (
     HTTPException,
     status,
 )
-from redis.auth import err
 
 from api.api_v1.short_url.crud import ShortUrlAlreadyExistsError, storage
 from api.api_v1.short_url.dependencies import (
@@ -71,4 +70,4 @@ def create_short_url(
         raise HTTPException(
             status_code=status.HTTP_409_CONFLICT,
             detail=f"Short URL with slug={short_url_create.slug!r} already exists.",
-        ) from err
+        )

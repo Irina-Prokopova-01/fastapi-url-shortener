@@ -149,7 +149,8 @@ ignore = [
     "RUF002", # ambiguous-unicode-character-docstring (RUF002)
     "RUF003", # ambiguous-unicode-character-comment (RUF003)
     "TC006", # runtime-cast-value (TC006)
-    "S311" # add for use random
+    "S311", # add for use random
+    "B904",
 ]
 
 # Allow fix for all enabled rules (when `--fix`) is provided.
