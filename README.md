@@ -1,5 +1,5 @@
 #FastAPI URL Shortener
-[![Hello World](https://github.com/Irina-Prokopova-01/fastapi-url-shortener/actions/workflows/hello-actions.yaml/badge.svg)](https://github.com/Irina-Prokopova-01/fastapi-url-shortener/actions/workflows/hello-actions.yaml)
+
 ## Develop
 
 Check Github Actions after any push.
