@@ -34,5 +34,8 @@ jobs:
         run: uv sync --locked --all-extras --dev
       - name: Run ruff
         uses: astral-sh/ruff-action@v3
+        with:
+          args: 'check --diff'
+          version-file: 'pyproject.toml'
       - name: Run mypy
         run: uv run mypy url-shortener
