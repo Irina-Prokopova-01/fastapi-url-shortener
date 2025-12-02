@@ -58,7 +58,7 @@ jobs:
           --health-retries 5
         ports:
           # Maps port 6379 on service container to the host
-          - 6379:6379
+          - 6380:6379
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
@@ -75,4 +75,4 @@ jobs:
         run: uv run pytest
         env:
           TESTING: 1
-          REDIS_PORT: 6379
+          REDIS_PORT: 6380
