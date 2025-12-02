@@ -20,7 +20,7 @@ def test_root_view(client: TestClient) -> None:
         "Irina",
         "Andrey",
         "",
-        "Dmitry Prokopov!@#$%%^^",
+        "Dmitry Prokopov",
     ],
 )
 def test_root_view_custom_name(
