@@ -132,4 +132,4 @@ def test_create_twice() -> None:
         match=short_url_create.slug,
     ) as exc_info:
         storage.create_or_raise_if_exists(short_url_create)
-        assert exc_info.value.args == (short_url_create.slug,)
+    assert exc_info.value.args == (short_url_create.slug,)
