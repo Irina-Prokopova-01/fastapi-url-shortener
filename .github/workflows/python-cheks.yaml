@@ -76,25 +76,8 @@ jobs:
         env:
           TESTING: 1
           REDIS_PORT: 6380
-      - name: Prepare coverage percentage
-        run: |
-          export EXTRACTED_COVERAGE=$(python -c 'import json; print(json.load(open("coverage.json"))["totals"]["percent_covered_display"])')
-          echo "TOTAL_COVERAGE=$EXTRACTED_COVERAGE" >> $GITHUB_ENV
-          echo "### Tests coverage: ${EXTRACTED_COVERAGE}%" >> $GITHUB_STEP_SUMMARY
-      - name: Update coverage badge
-        uses: schneegans/dynamic-badges-action@v1.7.0
-        with:
-          auth: ${{ secrets.GIST_TOKEN }}
-          gistID: 70ea871bcf931468980e1f40c636a66cc7d2a4d1
-          filename: coverage.json
-          label: Coverage
-          message: ${{ env.TOTAL_COVERAGE }}%
-          minColorRange: 70
-          maxColorRange: 90
-          valColorRange: ${{ env.TOTAL_COVERAGE }}
       - name: Upload coverage reports to Codecov
         uses: codecov/codecov-action@v5
-        if: ${{ !github.event.act }}
         with:
           token: ${{ secrets.CODECOV_TOKEN }}
           files: coverage.xml

@@ -10,6 +10,8 @@
 [![Codecov](https://codecov.io/gh/Irina-Prokopova-01/fastapi-url-shortener/branch/main/graph/badge.svg)](https://codecov.io/gh/Irina-Prokopova-01/fastapi-url-shortener)
 
 
+[![Coverage](https://img.shields.io/endpoint?url=https%3A%2F%2Fgist.githubusercontent.com%2FIrina-Prokopova-01%2F974c60a7707fee6314a485fa9a86b39d%2Fraw%2F70ea871bcf931468980e1f40c636a66cc7d2a4d1%2Fcoverage.json)](https://github.com/Irina-Prokopova-01/fastapi-url-shortener/actions/workflows/python-checks.yaml)
+
 ## Develop
 
 Check Github Actions after any push.
