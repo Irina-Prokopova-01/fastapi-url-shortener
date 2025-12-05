@@ -1,8 +1,9 @@
 import logging
 from pathlib import Path
+from typing import Literal
 
 from pydantic import BaseModel
-from pydantic_settings import BaseSettings
+from pydantic_settings import BaseSettings, SettingsConfigDict
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -12,9 +13,19 @@ LOG_FORMAT: str = (
 
 
 class LoggingConfig(BaseModel):
-    log_level: int = logging.INFO
+    log_level_name: Literal[
+        "DEBUG",
+        "INFO",
+        "WARNING",
+        "ERROR",
+        "CRITICAL",
+    ] = ""
     log_format: str = LOG_FORMAT
     date_format: str = "%Y-%m-%d %H:%M:%S"
+
+    @property
+    def log_level(self) -> int:
+        return logging.getLevelNamesMapping()[self.log_level_name]
 
 
 class RedisConnectionConfig(BaseModel):
@@ -41,9 +52,14 @@ class RedisConfig(BaseModel):
 
 
 class Settings(BaseSettings):
+    model_config = SettingsConfigDict(
+        cli_parse_args=True,
+    )
     logging: LoggingConfig = LoggingConfig()
     redis: RedisConfig = RedisConfig()
 
 
 # noinspection PyArgumentList
 settings = Settings()
+# print(settings.logging)
+# print(settings.logging.log_level)
