@@ -1,27 +1,49 @@
 import logging
-from os import getenv
 from pathlib import Path
 
-BASE_DIR = Path(__file__).resolve().parent.parent
-# SHORT_URL_STORAGE_FILEPATH = BASE_DIR / "short-url.json"
+from pydantic import BaseModel
+from pydantic_settings import BaseSettings
 
-# C:\Users\User\PycharmProjects\fastapi-url-shortener\url-shortener\core\config.py
-LOG_LEVEL = logging.INFO
+BASE_DIR = Path(__file__).resolve().parent.parent
+
 LOG_FORMAT: str = (
     "[%(asctime)s.%(msecs)03d] %(module)10s:%(lineno)-3d %(levelname)-7s - %(message)s"
 )
 
-USERS_DB: dict[str, str] = {
-    "sam": "passw",
-    "bob": "pass",
-}
 
-REDIS_HOST = getenv("REDIS_HOST", "localhost")
-REDIS_PORT = int(getenv("REDIS_PORT", 0)) or 6379  # noqa: PLW1508
-REDIS_DB = 0
-REDIS_DB_TOKENS = 1
-REDIS_DB_USERS = 2
-REDIS_DB_SHORT_URLS = 3
+class LoggingConfig(BaseModel):
+    log_level: int = logging.INFO
+    log_format: str = LOG_FORMAT
+    date_format: str = "%Y-%m-%d %H:%M:%S"
 
-REDIS_TOKENS_SET_NAME = "tokens"
-REDIS_SHORT_URLS_HASH_NAME = "short-urls"
+
+class RedisConnectionConfig(BaseModel):
+    host: str = "localhost"
+    port: int = 6379
+
+
+class RedisDatabaseConfig(BaseModel):
+    default: int = 0
+    tokens: int = 1
+    users: int = 2
+    short_urls: int = 3
+
+
+class RedisCollectionsNamesConfig(BaseModel):
+    tokens_set: str = "tokens"
+    short_urls_hash: str = "short-urls"
+
+
+class RedisConfig(BaseModel):
+    connection: RedisConnectionConfig = RedisConnectionConfig()
+    db: RedisDatabaseConfig = RedisDatabaseConfig()
+    collections_name: RedisCollectionsNamesConfig = RedisCollectionsNamesConfig()
+
+
+class Settings(BaseSettings):
+    logging: LoggingConfig = LoggingConfig()
+    redis: RedisConfig = RedisConfig()
+
+
+# noinspection PyArgumentList
+settings = Settings()
