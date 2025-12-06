@@ -58,7 +58,7 @@ jobs:
           --health-retries 5
         ports:
           # Maps port 6379 on service container to the host
-          - 6380:6379
+          - 6379:6379
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
@@ -75,7 +75,7 @@ jobs:
         run: uv run pytest url-shortener --cov=url-shortener --cov-report=xml:coverage.xml
         env:
           TESTING: 1
-          REDIS_PORT: 6380
+          REDIS_PORT: 6379
       - name: Upload coverage reports to Codecov
         uses: codecov/codecov-action@v5
         with:
