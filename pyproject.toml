@@ -153,6 +153,8 @@ ignore = [
     "TC006", # runtime-cast-value (TC006)
     "S311", # add for use random
     "B904",
+    "EM101",
+    "TRY003",
 ]
 
 # Allow fix for all enabled rules (when `--fix`) is provided.
