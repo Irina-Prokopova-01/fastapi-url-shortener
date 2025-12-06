@@ -21,13 +21,12 @@ def main() -> None:
     b = 2
     c = add(a, b)
     print(c)
-    print("type c:", type(c))
     reveal_type(c)
     print(redis.ping())
-    redis.set("name", "Irina")
+    redis.set("name", "Suren")
     redis.set("foo", "bar")
     redis.set("number", "42")
-    print("name", redis.get("name"))
+    print("name:", redis.get("name"))
     print(
         [
             redis.get("foo"),
@@ -36,7 +35,8 @@ def main() -> None:
         ],
     )
     redis.delete("name")
-    print("name", redis.get("name"))
+    print("name:", redis.get("name"))
+    print("spam:", redis.get("spam"))
 
 
 if __name__ == "__main__":
