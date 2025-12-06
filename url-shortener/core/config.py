@@ -19,7 +19,7 @@ class LoggingConfig(BaseModel):
         "WARNING",
         "ERROR",
         "CRITICAL",
-    ] = ""
+    ] = "INFO"
     log_format: str = LOG_FORMAT
     date_format: str = "%Y-%m-%d %H:%M:%S"
 
