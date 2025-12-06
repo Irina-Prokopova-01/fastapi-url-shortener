@@ -74,8 +74,8 @@ class ShortUrlsStorageGetShortUrlsTestCase(TestCase):
     @classmethod
     def setUpClass(cls) -> None:
         if getenv("TESTING") != "1":
-            raise OSError(  # noqa: TRY003
-                "Environment is not ready for testing",  # noqa: EM101
+            raise OSError(
+                "Environment is not ready for testing",
             )
         cls.short_urls = [
             create_short_url_random_slug() for _ in range(cls.SHORT_URLS_COUNT)
