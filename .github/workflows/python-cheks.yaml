@@ -76,10 +76,10 @@ jobs:
           TESTING: 1
           URL_SHORTENER__REDIS__CONNECTION__HOST: redis
           URL_SHORTENER__REDIS__CONNECTION__PORT: 6379
-      - name: Upload coverage reports to Codecov
-        uses: codecov/codecov-action@v5
-        with:
-          token: ${{ secrets.CODECOV_TOKEN }}
-          files: coverage.xml
-          dry_run: ${{ env.ACT }}
-          fail_ci_if_error: 'true'
+#      - name: Upload coverage reports to Codecov
+#        uses: codecov/codecov-action@v5
+#        with:
+#          token: ${{ secrets.CODECOV_TOKEN }}
+#          files: coverage.xml
+#          dry_run: ${{ env.ACT }}
+#          fail_ci_if_error: 'true'
