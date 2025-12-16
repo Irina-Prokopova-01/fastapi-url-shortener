@@ -1,3 +1,5 @@
+from datetime import date
+
 from fastapi import (
     APIRouter,
     Request,
@@ -11,10 +13,30 @@ router = APIRouter(
     tags=["Read Root"],
 )
 
+
 @router.get(
     "/",
     response_class=HTMLResponse,
 )
 def read_root(
-) -> str:
-    return (BASE_DIR / "pages" / "home.html").read_text()
+    request: Request,
+) -> HTMLResponse:
+    context = {}
+    today = date.today()
+    features = [
+        "Create short URLs",
+        "Track all redirects",
+        "Real-time statistics",
+        "Shared management",
+    ]
+    context.update(
+        today=today,
+        features=features,
+    )
+    # print(f'"Контекст":{context}')
+    return templates.TemplateResponse(
+        request=request,
+        name="home.html",
+        context=context,
+    )
+
