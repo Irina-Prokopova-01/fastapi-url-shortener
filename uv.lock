@@ -233,6 +233,7 @@ source = { virtual = "." }
 dependencies = [
     { name = "config" },
     { name = "fastapi", extra = ["standard"] },
+    { name = "jinja2" },
     { name = "pydantic-settings", extra = ["yaml"] },
     { name = "redis", extra = ["hiredis"] },
     { name = "typer" },
@@ -253,6 +254,7 @@ dev = [
 requires-dist = [
     { name = "config", specifier = ">=0.5.1" },
     { name = "fastapi", extras = ["standard", "standart"], specifier = ">=0.116.2" },
+    { name = "jinja2", specifier = ">=3.1.6" },
     { name = "pydantic-settings", extras = ["yaml"], specifier = ">=2.12.0" },
     { name = "redis", extras = ["hiredis"], specifier = ">=6.4.0" },
     { name = "typer", specifier = ">=0.17.4" },
