@@ -14,13 +14,16 @@
     crossorigin="anonymous">
 </head>
 <body>
-<main class="container">
+<header>
+{% include 'components/navbar.html' %}
+</header>
+<main class="container my-3">
   {% block main %}
   {% endblock %}
 
 </main>
 
-<footer class="mt-5">
+<footer class="mt-5 ms-5">
   {% block footer %}
     &copy Irina Prokopova {{ today.year }}
   {% endblock %}
