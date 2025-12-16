@@ -2,22 +2,19 @@ from fastapi import (
     APIRouter,
     Request,
 )
+from starlette.responses import HTMLResponse
+
+from core.config import BASE_DIR
+from templating import templates
 
 router = APIRouter(
     tags=["Read Root"],
 )
 
-
-@router.get("/")
+@router.get(
+    "/",
+    response_class=HTMLResponse,
+)
 def read_root(
-    request: Request,
-    name: str = "World",
-) -> dict[str, str]:
-    docs_url = request.url.replace(
-        path="/docs",
-        query="",
-    )
-    return {
-        "message": f"Hello {name}",
-        "docs": str(docs_url),
-    }
+) -> str:
+    return (BASE_DIR / "pages" / "home.html").read_text()
