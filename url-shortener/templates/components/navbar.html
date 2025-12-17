@@ -20,20 +20,20 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav">
-        {% for name, title in navigation %}
-          {% set url = url_for(name) %}
-          <li class="nav-item">
-            <a
-              {% if url.path == request.url.path %}
-                class="nav-link active"
-                aria-current="page"
-              {% else %}
-                class="nav-link"
-              {% endif %}
-                href="{{ url }}"
-            >{{ title }}</a>
-          </li>
-        {% endfor %}
+        <li class="nav-item">
+          {% for name, title in navigation %}
+            {% set url = url_for(name) %}
+              <a
+                {% if url.path == request.url.path %}
+                  class="nav-link active"
+                  aria-current="page"
+                {% else %}
+                  class="nav-link"
+                {% endif %}
+                  href="{{ url }}"
+              >{{ title }}</a>
+            </li>
+          {% endfor %}
 
       </ul>
     </div>

@@ -1,4 +1,4 @@
-from datetime import date
+from typing import Any
 
 from fastapi import (
     APIRouter,
@@ -6,7 +6,6 @@ from fastapi import (
 )
 from starlette.responses import HTMLResponse
 
-from core.config import BASE_DIR
 from templating import templates
 
 router = APIRouter(
@@ -23,7 +22,7 @@ router = APIRouter(
 def home_page(
     request: Request,
 ) -> HTMLResponse:
-    context = {}
+    context: dict[str, Any] = {}
     features = [
         "Create short URLs",
         "Track all redirects",
@@ -46,7 +45,7 @@ def home_page(
     include_in_schema=False,
 )
 def about_page(
-    request: Request
+    request: Request,
 ) -> HTMLResponse:
     return templates.TemplateResponse(
         request=request,

@@ -39,6 +39,7 @@ console_output_style = "progress"
 
 markers = [
     "apitest: test any http api call",
+    "templatetest: test any http HTML template page",
 ]
 xfail_strict = true
 
@@ -156,6 +157,8 @@ ignore = [
     "B904",
     "EM101",
     "TRY003",
+    "DTZ011",
+    "DTZ005",
 ]
 
 # Allow fix for all enabled rules (when `--fix`) is provided.
