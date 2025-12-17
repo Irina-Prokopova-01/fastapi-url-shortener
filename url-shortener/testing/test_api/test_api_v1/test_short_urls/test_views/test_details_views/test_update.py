@@ -6,7 +6,7 @@ from pydantic import AnyHttpUrl
 from starlette import status
 from starlette.testclient import TestClient
 
-from api.api_v1.short_url.crud import storage
+from storage.short_urls.crud import storage
 from main import app
 from schemas.short_url import DESCRIPTION_MAX_LENGTH, ShortUrl, ShortUrlUpdate
 from testing.conftest import create_short_url_random_slug

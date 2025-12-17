@@ -6,7 +6,7 @@ from os import getenv
 import pytest
 from pydantic import AnyHttpUrl
 
-from api.api_v1.short_url.crud import storage
+from storage.short_urls.crud import storage
 from schemas.short_url import ShortUrl, ShortUrlCreate
 
 

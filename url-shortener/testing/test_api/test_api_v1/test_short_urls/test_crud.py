@@ -4,7 +4,8 @@ from unittest import TestCase
 
 import pytest
 
-from api.api_v1.short_url.crud import ShortUrlAlreadyExistsError, storage
+from storage.short_urls.crud import storage
+from storage.short_urls.exeptions import ShortUrlAlreadyExistsError
 from schemas.short_url import (
     ShortUrl,
     ShortUrlCreate,

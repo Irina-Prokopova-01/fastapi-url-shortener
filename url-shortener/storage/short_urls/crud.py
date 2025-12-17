@@ -1,4 +1,7 @@
-__all__ = ("storage",)
+__all__ = (
+    "ShortUrlsStorage",
+    "storage",
+)
 
 import logging
 from collections.abc import Iterable
@@ -14,6 +17,7 @@ from schemas.short_url import (
     ShortUrlPartialUpdate,
     ShortUrlUpdate,
 )
+from storage.short_urls.exeptions import ShortUrlAlreadyExistsError
 
 log = logging.getLogger(__name__)
 
@@ -23,18 +27,6 @@ redis = Redis(
     db=settings.redis.db.short_urls,
     decode_responses=True,
 )
-
-
-class ShortUrlBaseError(Exception):
-    """
-    Base exception for short url CRUD actions.
-    """
-
-
-class ShortUrlAlreadyExistsError(ShortUrlBaseError):
-    """
-    Raised on short url creation if such slug already exists.
-    """
 
 
 class ShortUrlsStorage(BaseModel):
