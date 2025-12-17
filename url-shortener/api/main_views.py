@@ -22,7 +22,6 @@ def read_root(
     request: Request,
 ) -> HTMLResponse:
     context = {}
-    today = date.today()
     features = [
         "Create short URLs",
         "Track all redirects",
@@ -30,7 +29,6 @@ def read_root(
         "Shared management",
     ]
     context.update(
-        today=today,
         features=features,
     )
     # print(f'"Контекст":{context}')
