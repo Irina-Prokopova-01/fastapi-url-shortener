@@ -19,7 +19,7 @@ def test_root_view(client: TestClient) -> None:
 # @pytest.mark.parametrize(
 #     "name",
 #     [
-#         # TODO: fake data
+#
 #         "Irina",
 #         "Andrey",
 #         "",
