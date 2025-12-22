@@ -6,12 +6,8 @@ from core.config import settings
 from storage.short_urls import ShortUrlsStorage
 
 
-def get_short_url_storage()->ShortUrlsStorage:
-    return ShortUrlsStorage(
-        hash_name=settings.redis.collections_name.short_urls_hash
-    )
+def get_short_url_storage() -> ShortUrlsStorage:
+    return ShortUrlsStorage(hash_name=settings.redis.collections_name.short_urls_hash)
 
-GetShortUrlsStorage = Annotated[
-    ShortUrlsStorage,
-    Depends(get_short_url_storage)
-]
+
+GetShortUrlsStorage = Annotated[ShortUrlsStorage, Depends(get_short_url_storage)]
