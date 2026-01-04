@@ -1,15 +1,13 @@
 from typing import Annotated
 
-from fastapi import Depends
+from fastapi import Depends, Request
 
 from core.config import settings
 from storage.short_urls import ShortUrlsStorage
 
 
-def get_short_url_storage()->ShortUrlsStorage:
-    return ShortUrlsStorage(
-        hash_name=settings.redis.collections_name.short_urls_hash
-    )
+def get_short_url_storage(request: Request,)->ShortUrlsStorage:
+    return request.app.state.short_urls_storage
 
 GetShortUrlsStorage = Annotated[
     ShortUrlsStorage,
