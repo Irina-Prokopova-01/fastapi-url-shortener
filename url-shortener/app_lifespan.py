@@ -9,12 +9,13 @@ from storage.short_urls import ShortUrlsStorage
 
 @asynccontextmanager
 async def lifespan(
-    app: FastAPI,  # noqa: ARG001
+    app: FastAPI,
 ) -> AsyncIterator[None]:
     # действия до запуска приложения
     # ставим эту функцию на паузу на время работы приложения
     app.state.short_urls_storage = ShortUrlsStorage(
-        hash_name=settings.redis.collections_name.short_urls_hash)
+        hash_name=settings.redis.collections_name.short_urls_hash,
+    )
     yield
     # выполняем завершение работы
     # закрываем соединения, финально сохраняем файлы
