@@ -39,6 +39,7 @@ def home_page(
         context=context,
     )
 
+
 @router.get(
     "/about",
     name="about",
