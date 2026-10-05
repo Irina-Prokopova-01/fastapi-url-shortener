@@ -4,14 +4,14 @@ from unittest import TestCase
 
 import pytest
 
-from storage.short_urls.crud import storage
-from storage.short_urls.exeptions import ShortUrlAlreadyExistsError
 from schemas.short_url import (
     ShortUrl,
     ShortUrlCreate,
     ShortUrlPartialUpdate,
     ShortUrlUpdate,
 )
+from storage.short_urls.crud import storage
+from storage.short_urls.exeptions import ShortUrlAlreadyExistsError
 from testing.conftest import (
     build_short_url_create_random_slug,
     create_short_url_random_slug,
