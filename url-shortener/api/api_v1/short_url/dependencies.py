@@ -15,12 +15,10 @@ from fastapi.security import (
 )
 
 from api.api_v1.auth.services import redis_tokens, redis_users
+from dependencies.short_url import GetShortUrlsStorage
 
 # from api.api_v1.short_url.views import SHORT_URLS
 from schemas.short_url import ShortUrl
-
-from dependencies.short_url import GetShortUrlsStorage
-from storage.short_urls import ShortUrlsStorage
 
 log = logging.getLogger(__name__)
 
